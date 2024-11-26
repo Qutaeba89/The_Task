@@ -1,33 +1,98 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# **Operativsystemsspecifika filer**
+.DS_Store
+Thumbs.db
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# **Loggfiler**
+*.log
+*.out
+*.err
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+# **Byggartefakter**
+/target/
+/build/
+/out/
+/bin/
 
-### NetBeans ###
+# **IDE-specifika filer**
+## IntelliJ IDEA
+/.idea/
+/*.iml
+.idea_modules/
+
+## Eclipse
+/.settings/
+/.metadata/
+/.classpath
+/.project
+
+## VS Code
+/.vscode/
+
+## NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+# **Beroenden**
+/node_modules/
+*.jar
+*.war
+*.ear
+*.class
+
+# **Maven**
+/target/
+dependency-reduced-pom.xml
+release.properties
+*.o
+*.d
+
+# **Gradle**
+.gradle/
+/build/
+!gradle-wrapper.jar
+
+# **Miljövariabler och känsliga filer**
+.env
+*.env
+*.key
+*.pem
+/secrets/
+
+# **Docker**
+/docker-compose.override.yml
+/docker-compose.local.yml
+/.docker/
+
+# **Testresultat**
+/test-output/
+/reports/
+/coverage/
+
+# **Spring Boot-specifika filer**
+/logs/
+/*.log
+/*.out
+/*.bak
+/.config/
+/.env
+/*.env
+/*.yml
+/*.yaml
+
+# **Tillfälliga och cache-filer**
+*.swp
+*.tmp
+*.pid
+*.lock
+*.bak
+*.~*
+
+# **OS-specifika temporära filer**
+*.bak
+*.~*
+
+# **Git-specifika filer**
+*.orig
