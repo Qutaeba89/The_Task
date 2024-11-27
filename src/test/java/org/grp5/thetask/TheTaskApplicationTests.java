@@ -38,13 +38,13 @@ class TheTaskApplicationTests {
     @Test
     public void testAddTaskIncreasesSize() {
         // Adds an empty list for new tasks
-        List<Object> tasks = new ArrayList<>();
-
+        TodoList newList = new TodoList();
+    
         // Adds a new task to the list
-        int initialSize = tasks.size(); // Gets the initial size of tasks list
-        tasks.add(new Object()); // A new task is added to the list
-        int newSize = tasks.size(); // Get the new size of tasks list
-
+        int initialSize = newList.getTodoTasks().size(); // Gets the initial size of tasks list
+        newList.createTodoTask(null, 0); // A new task is added to the list
+        int newSize = newList.getTodoTasks().size(); // Get the new size of tasks list
+    
         // Controls that the initial size has been incremented by 1
         assertEquals(initialSize + 1, newSize);
     }
