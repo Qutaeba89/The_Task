@@ -10,4 +10,9 @@ public class TodoTask {
         this.timeInMilliSecDeadLine = timeInMilliSecDeadLine;
 
     }
+
+    public boolean isDeadLinePassed(long timeInMilliSecDeadLine){
+
+        return false;
+    }
 }
