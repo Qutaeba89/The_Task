@@ -22,18 +22,13 @@ class TheTaskApplicationTests {
         String correctPassword = "12345";
 
         // logIn is true by checking username and pw. 
-        boolean isLoggedIn = isCorrectLogin(correctUsername, correctPassword);
+        boolean isLoggedIn = Check.isCorrectLogin(correctUsername, correctPassword);
 
         // check if inlogg is correct
         assertTrue(isLoggedIn, "Inloggning med rätt användarnamn och lösenord ska lyckas");
     }
 
-    /*check username and password  
-     against the correct username and password*/
-    private boolean isCorrectLogin(String username, String password) {
-                
-        return "testUser".equals(username) && "12345".equals(password);
-    }
+   
 
     @Test
     public void testAddTaskIncreasesSize() {
