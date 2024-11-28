@@ -47,9 +47,9 @@ _______________________
     - [ ] Todo för list och task
 
 - **Databasen**
-    - [ ] Kunna lägga till användare till databasen(username m password)
-    - [ ] Lista av users med password i databasen
-        - [ ] Skapa mock data -> users att börja med: Dennis, Niklas, Farre & Qutaiba
+    - [x] Kunna lägga till användare till databasen(username m password)
+    - [x] Lista av users med password i databasen
+        - [x] Skapa mock data -> users att börja med: Dennis, Niklas, Farre & Qutaiba
 
 - **User**
     - [ ] Kunna skapa nya listor
