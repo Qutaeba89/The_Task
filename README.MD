@@ -38,6 +38,18 @@ _______________________
 
 _______________________
 
+**Arbetsflöde: Metod**
+
+ 1. Bestäm vad du vill göra
+ 2. Skapa issue OCH sätt dig som assignee
+ 3. Börja jobba
+ 4. När du klar med jobbet, kryssa i vald uppgift i README
+ 5. Pusha (ALDRIG main branch)
+ 6. Merga. Ta bort branch OCH stäng ner issue
+
+
+_______________________
+
 **Våran generella TODO**
 
 **Java**
