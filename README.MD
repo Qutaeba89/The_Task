@@ -144,6 +144,7 @@ _______________________
     - [x] Skapa en annan test sida med baslayout som layout
 
 **Controllers**
+    - [x] Grundlläggande Mapping i LoginController
 
 - **Login**
     - [ ] Hantera korrekt inlogg - Redirect dashboard
