@@ -1,4 +1,5 @@
 package org.grp5.thetask;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -28,18 +29,17 @@ class TheTaskApplicationTests {
         assertTrue(isLoggedIn, "Inloggning med rätt användarnamn och lösenord ska lyckas");
     }
 
-   
 
     @Test
     public void testAddTaskIncreasesSize() {
         // Adds an empty list for new tasks
         TodoList newList = new TodoList();
-    
+
         // Adds a new task to the list
         int initialSize = newList.getTodoTasks().size(); // Gets the initial size of tasks list
         newList.createTodoTask(null, 0); // A new task is added to the list
         int newSize = newList.getTodoTasks().size(); // Get the new size of tasks list
-    
+
         // Controls that the initial size has been incremented by 1
         assertEquals(initialSize + 1, newSize);
     }
@@ -66,7 +66,7 @@ class TheTaskApplicationTests {
         long inFuture = currentTime + oneHour;
         long inPast = currentTime - oneHour;
 
-        TodoTask task = new TodoTask(null, 0);
+        TodoTask task = new TodoTask(0, null, 0);
         assertTrue(task.isDeadLinePassed(inPast));
         assertFalse(task.isDeadLinePassed(inFuture));
     }
