@@ -1,10 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/baselayout}">
 
 
+    <div layout:fragment="main-content">
 
-<div layout:fragment="main-content">
+        <h2>Login sida för "The Task" grupp 5</h2>
 
-</div>
+        <form action="#" th:action="@{/login}" method="post">
+            <label for="username">Användarnamn:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Lösenord:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="submit">Logga in</button>
+        </form>
+
+    </div>
+
+</html>
