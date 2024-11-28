@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register page</title>
-</head>
-<body>
-    
-</body>
-</html>
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/baselayout}">
+<div layout:fragment="main-content">
+    <h1>Registrera ny användare</h1>
+
+    <label class="usename">Användarnamn</label><br>
+    <input name="Username" required><br>
+    <label class="password">Lösenord</label><br>
+    <input name="Password" required><br>
+    <label class="passwordBekrafta">Bekräfta lösenord</label><br>
+    <input name="Password" required><br>
+    <button type="submit">Regiser dig</button><br>
+
+    <a href="login">Tillbaka till login sida</a>
+</div>
