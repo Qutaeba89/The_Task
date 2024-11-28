@@ -107,6 +107,13 @@ Våran generella TODO:
   - [ ] Styla (extra krydda)
   - [ ] vid utlogg -> redirect till login.html
 
+
+- **Fragments**
+  - [x] Lägg till dependencies
+  - [x] Skapa baslayout.html
+  - [x] Skapa en test sida med baslayout som layout
+  - [x] Skapa en annan test sida med baslayout som layout
+
 **Controllers**
 
 - **Login**
