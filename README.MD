@@ -1,7 +1,7 @@
 The-Task Grupp 5
 
-Våran generella TODO:
 
+_______________________
 **Kod ordning** *(vad behöver kodas först)*
 
 **Phase 1**
@@ -24,8 +24,13 @@ Våran generella TODO:
   - [ ] Add 'TaskList' rutan-div
 
 **Phase 3**
-- Testar som galningar
+- [ ] Testar som galningar
 
+
+
+_______________________
+
+**Våran generella TODO**
 
 **Java**
 
