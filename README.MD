@@ -104,9 +104,9 @@ _______________________
     - [ ] Visa felmedelande när username redan finns (vid post)
     - [ ] Visa felmedelande när passwords inte stämmer (innan post)
     - [ ] Vid lyckad skapande, redirect till login
-    - [ ] Skapa knapp för register
-    - [ ] Skapa txt fält, username, password, password 2
-    - [ ] Skapa tillbaka länk ("redan medlem?, logga in")
+    - [x] Skapa knapp för register
+    - [x] Skapa txt fält, username, password, password 2
+    - [x] Skapa tillbaka länk ("redan medlem?, logga in")
 
 
 - **Dashboard Page**
