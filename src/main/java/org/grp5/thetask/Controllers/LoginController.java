@@ -1,4 +1,4 @@
-package org.grp5.thetask;
+package org.grp5.thetask.Controllers;  
 
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
