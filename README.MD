@@ -64,15 +64,15 @@ _______________________
         - [x] Skapa mock data -> users att börja med: Dennis, Niklas, Farre & Qutaiba
 
 - **User**
-    - [ ] Kunna skapa nya listor
-    - [ ] Kunna hämta alla listor
-    - [ ] Kunna hämta specifc lista (kräver id?)
-    - [ ] Kunna hämta password (för att checka mot inlogg)
+    - [x] Kunna skapa nya listor
+    - [x] Kunna hämta alla listor
+    - [x] Kunna hämta specifc lista (kräver id?)
+    - [x] Kunna hämta password (för att checka mot inlogg)
 
 - **TodoList**
-    - [ ] Kunna Hämta tasks
-    - [ ] Kunna Hämta specifc task (kräver id?)
-    - [ ] Unikt ID
+    - [x] Kunna Hämta tasks
+    - [x] Kunna Hämta specifc task (kräver id?)
+    - [x] Unikt ID
 
 - **TodoTask**
     - [ ] Kunna hämta title
@@ -84,7 +84,6 @@ _______________________
 
 **Javascript**
 - [x] Skapa script.js fil som kan användas vid behov
-- [ ]
 
 **Html**
 
