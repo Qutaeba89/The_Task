@@ -10,8 +10,8 @@ _______________________
 - [ ] Controller klasser - För att kunna se sidorna.
     - [ ] Login Controller Class
         - [ ] Mapping Method för att visa sidan
-    - [x] Register Controller Class
-        - [x] Mapping Method för att visa sidan
+    - [ ] Register Controller Class
+        - [ ] Mapping Method för att visa sidan
     - [ ] Dashboard Controller Class
         - [ ] Mapping Method för att visa sidan
 - [ ] Html filer utan funktioner till backend
