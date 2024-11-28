@@ -82,6 +82,10 @@ _______________________
     - [ ] Kontrollera om login uppgifter stämmer - boolean
     - [ ] Kontrollera om user redan finns - boolean
 
+**Javascript**
+- [x] Skapa script.js fil som kan användas vid behov
+- [ ]
+
 **Html**
 
 - **Login Page**
