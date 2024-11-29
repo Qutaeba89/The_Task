@@ -56,7 +56,7 @@ _______________________
 
 - **Folders**
     - [ ] Controllers
-    - [ ] Todo för list och task
+    - [x] Todo för list och task
 
 - **Databasen**
     - [x] Kunna lägga till användare till databasen(username m password)
