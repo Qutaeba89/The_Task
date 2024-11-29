@@ -2,7 +2,7 @@ package org.grp5.thetask;
 
 import java.util.ArrayList;
 import org.grp5.thetask.ToDos.TodoList;
-import org.grp5.thetask.ToDos.TodoTask;
+
 
 public class User {
     private final String username;

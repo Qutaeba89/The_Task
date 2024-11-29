@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import jakarta.servlet.http.HttpSession;
 
-import org.grp5.thetask.User;          // Importera User-klassen
+import org.grp5.thetask.User; 
  
 
 @Controller
