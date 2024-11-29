@@ -1,4 +1,4 @@
-package org.grp5.thetask;
+package org.grp5.thetask.Controllers;  
 
 import java.util.ArrayList;
 import java.util.List;
