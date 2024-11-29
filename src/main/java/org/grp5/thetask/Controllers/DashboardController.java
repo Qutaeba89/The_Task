@@ -1,4 +1,4 @@
-package org.grp5.thetask.Controllers;  
+package org.grp5.thetask.Controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
