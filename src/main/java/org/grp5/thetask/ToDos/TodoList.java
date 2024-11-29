@@ -1,4 +1,4 @@
-package org.grp5.thetask;
+package org.grp5.thetask.ToDos;
 
 import java.util.ArrayList;
 

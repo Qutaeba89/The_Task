@@ -2,6 +2,8 @@ package org.grp5.thetask;
 
 import java.util.ArrayList;
 
+import org.grp5.thetask.ToDos.TodoList;
+
 public class User {
     private final String username;
     private final String password;

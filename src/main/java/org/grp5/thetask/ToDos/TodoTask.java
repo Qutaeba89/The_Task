@@ -1,4 +1,4 @@
-package org.grp5.thetask;
+package org.grp5.thetask.ToDos;
 
 public class TodoTask {
     private final long id; // Unique ID for a task.

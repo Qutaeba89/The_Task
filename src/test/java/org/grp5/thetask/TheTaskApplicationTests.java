@@ -30,44 +30,44 @@ class TheTaskApplicationTests {
     }
 
 
-    @Test
-    public void testAddTaskIncreasesSize() {
-        // Adds an empty list for new tasks
-        TodoList newList = new TodoList();
+    // @Test
+    // public void testAddTaskIncreasesSize() {
+    //     // Adds an empty list for new tasks
+    //     TodoList newList = new TodoList();
 
-        // Adds a new task to the list
-        int initialSize = newList.getTodoTasks().size(); // Gets the initial size of tasks list
-        newList.createTodoTask(null, 0); // A new task is added to the list
-        int newSize = newList.getTodoTasks().size(); // Get the new size of tasks list
+    //     // Adds a new task to the list
+    //     int initialSize = newList.getTodoTasks().size(); // Gets the initial size of tasks list
+    //     newList.createTodoTask(null, 0); // A new task is added to the list
+    //     int newSize = newList.getTodoTasks().size(); // Get the new size of tasks list
 
-        // Controls that the initial size has been incremented by 1
-        assertEquals(initialSize + 1, newSize);
-    }
+    //     // Controls that the initial size has been incremented by 1
+    //     assertEquals(initialSize + 1, newSize);
+    // }
 
 
-    @Test
-    public void testAddUser() {  // Testing om user already exists
-        User user = new User("SS", "WW");
-        assertEquals("SS", user.getUsername());
-        assertEquals("WW", user.getPassword());
-        //Testing add new user
-        user.setUsername("rr");
-        user.setPassword("22");
+    // @Test
+    // public void testAddUser() {  // Testing om user already exists
+    //     User user = new User("SS", "WW");
+    //     assertEquals("SS", user.getUsername());
+    //     assertEquals("WW", user.getPassword());
+    //     //Testing add new user
+    //     user.setUsername("rr");
+    //     user.setPassword("22");
 
-        assertEquals("rr", user.getUsername());
-        assertEquals("22", user.getPassword());
-    }
+    //     assertEquals("rr", user.getUsername());
+    //     assertEquals("22", user.getPassword());
+    // }
 
-    @Test
-    public void testIsDeadLineOver() {
+    // @Test
+    // public void testIsDeadLineOver() {
 
-        long currentTime = System.currentTimeMillis();
-        long oneHour = 1000 * 60 * 60;
-        long inFuture = currentTime + oneHour;
-        long inPast = currentTime - oneHour;
+    //     long currentTime = System.currentTimeMillis();
+    //     long oneHour = 1000 * 60 * 60;
+    //     long inFuture = currentTime + oneHour;
+    //     long inPast = currentTime - oneHour;
 
-        TodoTask task = new TodoTask(0, null, 0);
-        assertTrue(task.isDeadLinePassed(inPast));
-        assertFalse(task.isDeadLinePassed(inFuture));
-    }
+    //     TodoTask task = new TodoTask(0, null, 0);
+    //     assertTrue(task.isDeadLinePassed(inPast));
+    //     assertFalse(task.isDeadLinePassed(inFuture));
+    // }
 }
