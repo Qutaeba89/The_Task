@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import jakarta.servlet.http.HttpSession;
 
+import org.grp5.thetask.User; 
+ 
+
 @Controller
 public class UserController {
       private final List<User> users = new ArrayList<>();
