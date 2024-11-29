@@ -75,7 +75,7 @@ _______________________
     - [x] Unikt ID
 
 - **TodoTask**
-    - [ ] Kunna hämta title
+    - [x] Kunna hämta title
     - [ ] Kunna hämta deadline
 
 - **Check klass**
