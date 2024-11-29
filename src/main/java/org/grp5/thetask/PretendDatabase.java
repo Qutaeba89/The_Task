@@ -21,5 +21,14 @@ public class PretendDatabase {
         users.add(new User(username, password));
     }
 
+    // Return a user if a username matches a user in the list.
+    // Otherwise, it returns null.
+    public static User getUser(String username) {
+        for (User user : users)
+            if (user.getUsername().equals(username))
+                return user;
+        return null;
+    }
+
 
 }

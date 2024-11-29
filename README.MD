@@ -80,8 +80,8 @@ _______________________
     - [ ] Kunna hämta deadline
 
 - **Check klass**
-    - [ ] Kontrollera om login uppgifter stämmer - boolean
-    - [ ] Kontrollera om user redan finns - boolean
+    - [x] Kontrollera om login uppgifter stämmer - boolean
+    - [x] Kontrollera om user redan finns - boolean
 
 **Javascript**
 - [x] Skapa script.js fil som kan användas vid behov
