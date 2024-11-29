@@ -9,7 +9,7 @@ _______________________
 - [ ] Basklasser
 - [ ] Controller klasser - För att kunna se sidorna.
     - [ ] Login Controller Class
-        - [ ] Mapping Method för att visa sidan
+        - [x] Mapping Method för att visa sidan
     - [ ] Register Controller Class
         - [x] Mapping Method för att visa sidan
     - [ ] Dashboard Controller Class
@@ -55,7 +55,8 @@ _______________________
 **Java**
 
 - **Folders**
-    - [ ] Controllers
+
+    - [x] Controllers
     - [x] Todo för list och task
 
 - **Databasen**
