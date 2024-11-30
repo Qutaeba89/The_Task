@@ -10,7 +10,7 @@ _______________________
 - [ ] Controller klasser - För att kunna se sidorna.
     - [ ] Login Controller Class
         - [x] Mapping Method för att visa sidan
-    - [ ] Register Controller Class
+    - [x] Register Controller Class
         - [x] Mapping Method för att visa sidan
     - [ ] Dashboard Controller Class
         - [ ] Mapping Method för att visa sidan
@@ -101,10 +101,10 @@ _______________________
     - [ ] style (extra krydda)
 
 - **Register Page**
-    - [ ] POST för ny user uppgifter
-    - [ ] Visa felmedelande när username redan finns (vid post)
-    - [ ] Visa felmedelande när passwords inte stämmer (innan post)
-    - [ ] Vid lyckad skapande, redirect till login
+    - [x] POST för ny user uppgifter
+    - [x] Visa felmedelande när username redan finns (vid post)
+    - [x] Visa felmedelande när passwords inte stämmer (innan post)
+    - [x] Vid lyckad skapande, redirect till login
     - [x] Skapa knapp för register
     - [x] Skapa txt fält, username, password, password 2
     - [x] Skapa tillbaka länk ("redan medlem?, logga in")
