@@ -89,17 +89,15 @@ _______________________
 **Html**
 
 - **Login Page**
-    - [x] Skapa Knapp för login
-    - [x] Skapa textfield för användarnamn och lösenord
-    - [x] titel
-    - [ ] POST för login uppgifter
-    - [ ] Visa felmedelande vid misslyckat inlogg
+    
+    - [x] POST för login uppgifter
+    - [x] Visa felmedelande vid misslyckat inlogg
     - [ ] Visa felmedelande vid saknad username/password i input fälten
-    - [ ] Vid lyckad inlogg, redirect till dashboard
-    - [ ] Skapa knapp för login
-    - [ ] Skapa txt fält username, password
-    - [ ] Skapa header "welcome"
-    - [ ] skapa länk till register
+    - [x] Vid lyckad inlogg, redirect till dashboard
+    - [x] Skapa knapp för login
+    - [x] Skapa txt fält username, password
+    - [x] Skapa header som förklarar vart du kommit
+    - [x] skapa länk till register
     - [ ] style (extra krydda)
 
 - **Register Page**
