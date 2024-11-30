@@ -12,8 +12,8 @@ _______________________
         - [x] Mapping Method för att visa sidan
     - [ ] Register Controller Class
         - [x] Mapping Method för att visa sidan
-    - [ ] Dashboard Controller Class
-        - [ ] Mapping Method för att visa sidan
+    - [x] Dashboard Controller Class
+        - [x] Mapping Method för att visa sidan
 - [ ] Html filer utan funktioner till backend
 
 **Phase 2**
@@ -113,17 +113,17 @@ _______________________
 
 
 - **Dashboard Page**
-    - [ ] Visa Listor
-        - [ ] Visa tasks som tillhör listan
-            - [ ] checkbox för klar - (byta färg till grön(extra krydda))
+    - [x] Visa Listor
+        - [x] Visa tasks som tillhör listan
+            - [x] checkbox för klar - (byta färg till grön(extra krydda))
                 - [ ] deadline blockas när task klar.(inaktiveras / triggas ej / checkas ej / lös det bara)
                 - [ ] kan unchecka checkboxen (extra krydda)
                 - [ ] spara i backend att task klar? (om behov finns)
             - [ ] Färg vanligt -> basfärg
-            - [ ] visa title/name på task
+            - [x] visa title/name på task
             - [ ] färgändring om deadline nådd (röd)
             - [ ] visa deadline på något sätt. ( extra spicy)
-    - [ ] Header med username + välkommen
+    - [x] Header med username + välkommen
     - [x] Skapa divs för list, task och todoadd view
       - [x] TodoList div
       - [x] TodoTask div 
@@ -137,7 +137,7 @@ _______________________
         - [ ] Knapp för skapa lista / task
             - [ ] vid skapade så blir ytan tom.
         - [ ] Visa vilken lista den tillhör - om det är en task - txt fält
-    - [ ] knapp för logout
+    - [x] knapp för logout
         - [ ] redirect till loginpage
             - [ ] visa medelande "välkommen åter!" (extra krydda)
     - [ ] Styla (extra krydda)
