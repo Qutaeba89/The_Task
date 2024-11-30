@@ -124,6 +124,10 @@ _______________________
             - [ ] färgändring om deadline nådd (röd)
             - [ ] visa deadline på något sätt. ( extra spicy)
     - [ ] Header med username + välkommen
+    - [x] Skapa divs för list, task och todoadd view
+      - [x] TodoList div
+      - [x] TodoTask div 
+      - [x] TodoAdd div
     - [ ] Knapp för skapa ny lista
         - [ ] Knappens plats är där nästa lista ska skapas
     - [ ] Knapp för ny task (Sitter i listan)
