@@ -54,6 +54,9 @@ _______________________
 
 **Java**
 
+- **Constant Class**
+  - [x] Add a constant class with final values. This to avoid any spelling issues and DRY concept
+
 - **Folders**
 
     - [x] Controllers
@@ -148,12 +151,13 @@ _______________________
     - [x] Skapa en test sida med baslayout som layout
     - [x] Skapa en annan test sida med baslayout som layout
 
-**Controllers**
+- **Controllers**
     - [x] Grundlläggande Mapping i LoginController
 
 - **Login**
-    - [ ] Hantera korrekt inlogg - Redirect dashboard
-    - [ ] Hantera felaktigt inlogg - visa felmedelande för user
+    - [x] Hantera korrekt inlogg - Redirect dashboard
+    - [x] Hantera felaktigt inlogg - visa felmedelande för user
+    - [x] Hanera om session redan finns - Redirect dashboard.
 
 - **Register**
     - [ ] Hantera ny user
@@ -169,3 +173,5 @@ _______________________
         - [ ] visa nya listan
     - [ ] Hantera skapande av ny task
         - [ ] spara i korrekt lista
+    - [ ] Redirect till login om ingen session finns. 
+      - (ska inte kunna gå att nå dashboard utloggad)
