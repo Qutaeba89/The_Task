@@ -10,9 +10,9 @@
         <div class="left-align-div">
             <h1>Välkommen *username*</h1>
         </div>
-        <div>
-            <button class="right-align-div"><h3>Logga ut</h3></button>
-        </div>
+        <form th:action="@{/logout}" method="RequestMethod.POST">
+            <button type="submit" class="right-align-div"><h3>Logga ut</h3></button>
+        </form>
     </div>
 
     <div id="body-dashboard-div">

@@ -136,10 +136,10 @@ _______________________
             - [ ] vid skapade så blir ytan tom.
         - [ ] Visa vilken lista den tillhör - om det är en task - txt fält
     - [x] knapp för logout
-        - [ ] redirect till loginpage
+        - [x] redirect till loginpage
             - [ ] visa medelande "välkommen åter!" (extra krydda)
     - [ ] Styla (extra krydda)
-    - [ ] vid utlogg -> redirect till login.html
+    - [x] vid utlogg -> redirect till login.html
 
 
 - **Fragments**
