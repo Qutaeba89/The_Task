@@ -8,29 +8,33 @@ public class TodoList {
     private final int id;
     private final String title;
 
+    // COnstruktor
     public TodoList(int id, String title) {
         this.id = id;
         this.title = title;
     }
 
-
-    //Assume we get time in milliSec.
-    public void createTodoTask(int id, String title, long timeInMilliSecDeadLine) {
-        tasks.add(new TodoTask(id, title, timeInMilliSecDeadLine));
+    // Create new todo and add to list
+    public void createTodoTask(long taskId, String title, long deadline) {
+        tasks.add(new TodoTask(taskId, title, deadline));
     }
 
+    //Get specific todo based on id
     public TodoTask getTodoTask(int id) {
-        for (TodoTask task : tasks)
-            if (task.getId() == id)
+        for (TodoTask task : tasks) {
+            if (task.getId() == id) {
                 return task;
-        //If id does not exist, it returns null
-        return null;
+            }
+        }
+        return null; // if no task is found
     }
 
-    public ArrayList<TodoTask> getAllTodoTasks() {
+    // Return all todotask on todolist
+    public ArrayList<TodoTask> getTasks() {
         return tasks;
     }
 
+    // Getters  id and title
     public String getTitle() {
         return title;
     }
@@ -39,4 +43,3 @@ public class TodoList {
         return id;
     }
 }
-

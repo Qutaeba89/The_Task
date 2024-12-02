@@ -31,8 +31,12 @@ public class User {
     }
 
     public void createTodoList(int id, String title) {
-        userLists.add(new TodoList(id, title));
+        TodoList todoList = new TodoList(id, title);
+        // adding placeholder task
+        todoList.createTodoTask(1, "Exempeluppgift", System.currentTimeMillis() + 10000000);
+        userLists.add(todoList);
     }
+    
 
     public ArrayList<TodoList> getAllTodoLists() {
         return userLists;
