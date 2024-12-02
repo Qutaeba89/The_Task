@@ -6,15 +6,15 @@ _______________________
 
 **Phase 1**
 
-- [ ] Basklasser
-- [ ] Controller klasser - För att kunna se sidorna.
-    - [ ] Login Controller Class
+- [x] Basklasser
+- [x] Controller klasser - För att kunna se sidorna.
+    - [x] Login Controller Class
         - [x] Mapping Method för att visa sidan
     - [x] Register Controller Class
         - [x] Mapping Method för att visa sidan
     - [x] Dashboard Controller Class
         - [x] Mapping Method för att visa sidan
-- [ ] Html filer utan funktioner till backend
+- [x] Html filer utan funktioner till backend
 
 **Phase 2**
 
