@@ -21,7 +21,7 @@ _______________________
 - [ ] Controllers
     - [ ] Login post
     - [x] register post
-    - [ ] Hantera skapande av ny lista/task
+    - [x] Hantera skapande av ny lista/task
     - [ ] Få Mappings att funka
         - [x] login -> dashboard
         - [x] login -> register
