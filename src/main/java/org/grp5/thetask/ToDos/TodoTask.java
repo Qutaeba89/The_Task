@@ -1,13 +1,13 @@
 package org.grp5.thetask.ToDos;
 
 public class TodoTask {
-    private final long id; // Unique ID for a task.
+    private final long taskId; 
     private String title;
     private long timeInMilliSecDeadLine;
     private boolean taskStatus = false; // True if the task is completed, false if the task is incomplete.
 
-    public TodoTask(long id, String title, long timeInMilliSecDeadLine) {
-        this.id = id;
+    public TodoTask(long taskId, String title, long timeInMilliSecDeadLine) {
+        this.taskId = taskId;
         this.title = title;
         this.timeInMilliSecDeadLine = timeInMilliSecDeadLine;
 
@@ -18,8 +18,8 @@ public class TodoTask {
         return false;
     }
 
-    public long getId() {
-        return id;
+    public long getTaskId() {
+        return taskId;
     }
 
     public boolean isTaskStatus() {

@@ -1,20 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/baselayout}">
-
 
 <div layout:fragment="main-content">
 
     <div id="top-div-dashboard">
         <div class="left-align-div"> <!--Display the name of the currently logged-in user-->
-                <h1 th:text="'Välkommen ' + ${session.username}+'!'">Välkommen username</h1>
+            <h1 th:text="'Välkommen ' + ${session.username}+'!'">Välkommen username</h1>
         </div>
-        <form th:action="@{/logout}" method="RequestMethod.POST">
-            <!--Logout butten is linked to logout-->
-            <button type="submit" class="right-align-div"><h3>Logga ut</h3></button>
+        <form th:action="@{/logout}" method="POST">
+            <!--Logout button linked to logout-->
+            <button type="submit" class="right-align-div">Logga ut</button>
+
         </form>
-        </div>
+    </div>
+
     <div id="body-dashboard-div">
         <div class="list-div-holder">
 
@@ -24,32 +25,44 @@
                     <h3 th:text="${todoList.title}">List Title</h3>
                 </div>
 
-                <!-- Here we create each task in that list-->
-                <div class="task-div" th:each="i : ${#numbers.sequence(1, 5)}">
-                    <div><label>Task title</label></div>
+                <!-- Task div for each task in that list-->
+                <div class="task-div" th:each="task : ${todoList.tasks}">
+                    <div><label th:text="${task.title}">Task title</label></div>
                     <div>
                         <label>Deadline: </label>
+                        <span th:text="${#dates.format(task.getTimeInMilliSecDeadLine(), 'yyyy-MM-dd HH:mm')}">Deadline</span>
                     </div>
-                    <div><label>Task done: </label> <input type="checkbox"></div>
+                    <div>
+                        <label>Task done: </label>
+                        <input type="checkbox" th:checked="${task.isTaskStatus()}">
+                    </div>
                 </div>
 
+                <!-- FOrm to add task in list-->
+                <form th:action="@{/dashboard/createTask}" method="post">
+                    <input type="hidden" name="listId" th:value="${todoList.id}">
+                    <label for="taskTitle">New Task Title:</label>
+                    <input type="text" id="taskTitle" name="taskTitle" required>
 
+                    <label for="deadline">Deadline:</label>
+                    <input type="datetime-local" id="deadline" name="deadline" required>
+
+                    <button type="submit">Add Task</button>
+                </form>
             </div>
-        </div>
 
+        </div>
     </div>
-    <!-- Form to create a new list-->
+
+    <!-- Form for creating a new Todo list -->
     <div id="add-task-list-div">
         <form th:action="@{/dashboard/createList}" method="post">
             <label for="task-list-title">New List Title!</label>
             <input type="text" id="task-list-title" name="title" required><br>
-            <label> Deadline: </label>
-            <input type="datetime-local" id="datetime" name="datetime">
-            <button type="submit"> Create new task/list</button>
+            <button type="submit">Create new task/list</button>
         </form>
-        </div>
-
     </div>
-
+    
 
 </div>
+</html>
