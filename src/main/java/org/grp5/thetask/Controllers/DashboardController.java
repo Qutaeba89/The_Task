@@ -6,6 +6,8 @@ import org.grp5.thetask.PretendDatabase;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class DashboardController {
@@ -29,4 +31,28 @@ public class DashboardController {
         model.addAttribute("todoLists", currentUser.getAllTodoLists());
         return "dashboard";
     }
+
+    @PostMapping("/dashboard/createList")
+    public String createTodoList(HttpSession session, @RequestParam("title") String listTitle) {
+        // Controll is username is logged in.
+        String username = (String) session.getAttribute("username");
+        if (username == null) {
+            return "redirect:/login";
+        }
+
+        // Gets user from pretenddatabase.
+        User currentUser = PretendDatabase.getUser(username);
+        if (currentUser == null) {
+            return "redirect:/login";
+        }
+
+        // Fetch the next ID based on the current number of lists
+        int nextId = currentUser.getAllTodoLists().size() + 1;
+
+        // Create a new list for the user
+        currentUser.createTodoList(nextId, listTitle);
+
+        return "redirect:/dashboard";
+    }
+    
 }
