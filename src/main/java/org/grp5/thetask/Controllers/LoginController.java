@@ -35,12 +35,14 @@ public class LoginController {
         // Checks if user exist, then if pw matches.
         // else sends error msg.
         User user = PretendDatabase.getUser(username);
-        if (user != null) {
-            if (user.isPasswordCorrect(password)) {
+
+        if (user != null && user.isPasswordCorrect(password)) {
+            
                 session.setAttribute(USERNAME, username);
                 return "redirect:/dashboard";
-            }
+            
         }
+
         model.addAttribute(ERROR, "Fel användarnamn eller lösenord.");
         return "login";
     }
