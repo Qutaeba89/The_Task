@@ -20,12 +20,12 @@ _______________________
 
 - [ ] Controllers
     - [ ] Login post
-    - [ ] register post
+    - [x] register post
     - [ ] Hantera skapande av ny lista/task
     - [ ] Få Mappings att funka
-        - [ ] login -> dashboard
-        - [ ] login -> register
-        - [ ] register -> login
+        - [x] login -> dashboard
+        - [x] login -> register
+        - [x] register -> login
         - [ ] dashboard - login
 - [ ] Fragments html (arv/Extends/interface) (Måste inte användas)
     - [ ] Task-div
@@ -160,12 +160,12 @@ _______________________
     - [x] Hanera om session redan finns - Redirect dashboard.
 
 - **Register**
-    - [ ] Hantera ny user
-        - [ ] lägg till userobj i databas user lista
-        - [ ] Redirect till login
-            - [ ] Visa meddelande att du har skapat ny user
-    - [ ] Hantera user som redan finns
-        - [ ] skicka felmedelande till user
+    - [x] Hantera ny user
+        - [x] lägg till userobj i databas user lista
+        - [x] Redirect till login
+            - [x] Visa meddelande att du har skapat ny user
+    - [x] Hantera user som redan finns
+        - [x] skicka felmedelande till user
 
 - **Dashboard**
     - [ ] Hantera skapande av ny lista

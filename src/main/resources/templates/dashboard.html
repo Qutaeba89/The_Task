@@ -8,7 +8,7 @@
 
     <div id="top-div-dashboard">
         <div class="left-align-div"> <!--Display the name of the currently logged-in user-->
-                <h1 th:text="'Välkommen ' + ${session.username}">Välkommen username</h1>
+                <h1 th:text="'Välkommen ' + ${session.username}+'!'">Välkommen username</h1>
         </div>
         <form th:action="@{/logout}" method="RequestMethod.POST">
             <!--Logout butten is linked to logout-->
