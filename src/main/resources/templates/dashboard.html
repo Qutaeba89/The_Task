@@ -22,18 +22,18 @@
             <!-- Here we create a list div for each list in that user-->
             <div class="list-div" th:each="todoList : ${todoLists}">
                 <div class="list-header">
-                    <h3 th:text="${todoList.title}">List Title</h3>
+                    <h3 th:text="${todoList.title}">Att göra:</h3>
                 </div>
 
                 <!-- Task div for each task in that list-->
                 <div class="task-div" th:each="task : ${todoList.tasks}">
                     <div><label th:text="${task.title}">Task title</label></div>
                     <div>
-                        <label>Deadline: </label>
+                        <label>Färdigt senast: </label>
                         <span th:text="${#dates.format(task.getTimeInMilliSecDeadLine(), 'yyyy-MM-dd HH:mm')}">Deadline</span>
                     </div>
                     <div>
-                        <label>Task done: </label>
+                        <label>Klar </label>
                         <input type="checkbox" th:checked="${task.isTaskStatus()}">
                     </div>
                 </div>
@@ -41,13 +41,13 @@
                 <!-- FOrm to add task in list-->
                 <form th:action="@{/dashboard/createTask}" method="post">
                     <input type="hidden" name="listId" th:value="${todoList.id}">
-                    <label for="taskTitle">New Task Title:</label>
+                    <label for="taskTitle">Skapa ny uppgift:</label>
                     <input type="text" id="taskTitle" name="taskTitle" required>
 
-                    <label for="deadline">Deadline:</label>
+                    <label for="deadline">Klart senast:</label>
                     <input type="datetime-local" id="deadline" name="deadline" required>
 
-                    <button type="submit">Add Task</button>
+                    <button type="submit">Lägg till ny</button>
                 </form>
             </div>
 
@@ -57,12 +57,12 @@
     <!-- Form for creating a new Todo list -->
     <div id="add-task-list-div">
         <form th:action="@{/dashboard/createList}" method="post">
-            <label for="task-list-title">New List Title!</label>
+            <label for="task-list-title">Ska ny "Att göra" lista</label>
             <input type="text" id="task-list-title" name="title" required><br>
-            <button type="submit">Create new task/list</button>
+            <button type="submit">Ska ny att-göra lista</button>
         </form>
     </div>
-    
+
 
 </div>
 </html>
