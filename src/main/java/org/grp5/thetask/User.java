@@ -50,5 +50,9 @@ public class User {
         // Returns null if id does not exist
         return null;
     }
+    public void deleteTodoList(int listId) {
+        userLists.removeIf(list -> list.getId() == listId);
+    }
+    
 
 }
