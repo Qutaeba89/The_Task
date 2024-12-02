@@ -11,10 +11,15 @@
                 <h1 th:text="'Välkommen ' + ${session.username}">Välkommen username</h1>
         </div>
         <form th:action="@{/logout}" method="RequestMethod.POST">
+          dashboard-Welcome-message
             <!--Logout butten is linked to logout-->
             <button type="submit" class="right-align-div"><h3>Logga ut</h3></button>
         </form>
         </div>
+        <div>
+            <button type="submit" class="right-align-div"><h3>Logga ut</h3></button>
+        </form>
+    </div>
 
     <div id="body-dashboard-div">
         <div class="list-div-holder">
