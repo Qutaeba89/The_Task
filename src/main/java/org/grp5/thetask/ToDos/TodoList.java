@@ -22,7 +22,7 @@ public class TodoList {
     //Get specific todo based on id
     public TodoTask getTodoTask(int id) {
         for (TodoTask task : tasks) {
-            if (task.getId() == id) {
+            if (task.getTaskId() == id) {
                 return task;
             }
         }
