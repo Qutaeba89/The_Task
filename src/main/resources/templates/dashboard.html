@@ -28,6 +28,8 @@
                 <!-- Task div for each task in that list-->
                 <div class="task-div" th:each="task : ${todoList.tasks}">
                     <div><label th:text="${task.title}">Task title</label></div>
+                    <span th:if="${task.deadlinePassed()}" class="status-overdue">&#9888; Försenad</span>
+                    <span th:if="${!task.deadlinePassed()}" class="status-on-time">&#9989; I tid</span>
                     <div>
                         <label>Färdigt senast: </label>
                         <span th:text="${#dates.format(task.getTimeInMilliSecDeadLine(), 'yyyy-MM-dd HH:mm')}">Deadline</span>

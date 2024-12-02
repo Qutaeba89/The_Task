@@ -13,9 +13,8 @@ public class TodoTask {
 
     }
     
-    public boolean isDeadLinePassed(long timeInMilliSecDeadLine){
-
-        return false;
+    public boolean deadlinePassed() {
+        return System.currentTimeMillis() > this.timeInMilliSecDeadLine;
     }
 
     public long getTaskId() {

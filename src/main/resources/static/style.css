@@ -59,3 +59,13 @@
     align-items: center;
     padding: 10px;
 }
+
+.status-overdue {
+    color: red;
+    font-weight: bold;
+}
+
+.status-on-time {
+    color: green;
+    font-weight: bold;
+}
