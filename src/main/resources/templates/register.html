@@ -25,8 +25,9 @@
         </form>
 
         <!-- Display error or success messages -->
-        <p th:if="${error}" style="color: red;" th:text="${error}"></p>
-        <p th:if="${message}" style="color: green;" th:text="${message}"></p> <!--message fungerar bara på login sida-->
+        <p th:if="${error}" class="error-message" th:text="${error}"></p>
+        <p th:if="${message}" class="success-message" th:text="${message}" ></p>
+        <!--message fungerar bara på login sida-->
 
         <a th:href="@{/login}">Tillbaka till login sida</a>
     </div>

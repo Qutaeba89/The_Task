@@ -56,3 +56,9 @@ form p a {
 form p a:hover {
     text-decoration: underline;  
 }
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
