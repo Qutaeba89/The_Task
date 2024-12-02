@@ -19,7 +19,7 @@
         <div class="list-div-holder">
 
             <!-- Here we create a list div for each list in that user-->
-            <div class="list-div" th:each="i : ${#numbers.sequence(1, 5)}">
+            <div class="list-div" th:each="todoList : ${todoLists}">
 
                 <div class="list-header">
                     <h3>List Title nr XX</h3>
