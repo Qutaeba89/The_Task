@@ -23,7 +23,7 @@
                 <input type="password" id="password" name="password" required><br>
 
                 <div th:if="${error}" >
-                    <p th:text="${error}">Fel användarnamn eller lösenord.</p>
+                    <p th:text="${error}" class="error-message">Fel användarnamn eller lösenord.</p>
                 </div>
 
                 <button type="submit">Logga in</button>
