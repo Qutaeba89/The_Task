@@ -2,24 +2,33 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/baselayout}">
+
+      <head>
+        <link rel="stylesheet" type="text/css" href="registerStyle.css">
+    </head>
+
 <div layout:fragment="main-content">
     <h1>Registrera ny användare</h1>
-    <form th:action="@{/register}" method="post">
-        <label for="username">Användarnamn</label><br>
-        <input type="text" id="username" name="username" required><br>
-        
-        <label for="password">Lösenord</label><br>
-        <input type="password" id="password" name="password" required><br>
 
-        <label for="confirmePassword">Bekräfta lösenord</label><br>
-        <input type="password" id="confirmePassword" name="confirmePassword" required><br>
-        
-        <button type="submit">Registrera</button>
-    </form>
+    <div class="register-container">
+        <form th:action="@{/register}" method="post">
+            <label for="username">Användarnamn</label><br>
+            <input type="text" id="username" name="username" required><br>
 
-    <!-- Display error or success messages -->
-    <p th:if="${error}" style="color: red;" th:text="${error}"></p>
-    <p th:if="${message}" style="color: green;" th:text="${message}"></p> <!--message fungerar bara på login sida-->
+            <label for="password">Lösenord</label><br>
+            <input type="password" id="password" name="password" required><br>
 
-    <a th:href="@{/login}">Tillbaka till login sida</a>
+            <label for="confirmePassword">Bekräfta lösenord</label><br>
+            <input type="password" id="confirmePassword" name="confirmePassword" required><br>
+
+            <button type="submit">Registrera</button>
+        </form>
+
+        <!-- Display error or success messages -->
+        <p th:if="${error}" style="color: red;" th:text="${error}"></p>
+        <p th:if="${message}" style="color: green;" th:text="${message}"></p> <!--message fungerar bara på login sida-->
+
+        <a th:href="@{/login}">Tillbaka till login sida</a>
+    </div>
 </div>
+</html>
