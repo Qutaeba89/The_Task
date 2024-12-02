@@ -7,10 +7,16 @@
 <div layout:fragment="main-content">
 
     <div id="top-div-dashboard">
-        <div class="left-align-div">
-            <h1>Välkommen *username*</h1>
+        <div class="left-align-div"> <!--Display the name of the currently logged-in user-->
+                <h1 th:text="'Välkommen ' + ${session.username}">Välkommen username</h1>
         </div>
         <form th:action="@{/logout}" method="RequestMethod.POST">
+          dashboard-Welcome-message
+            <!--Logout butten is linked to logout-->
+            <button type="submit" class="right-align-div"><h3>Logga ut</h3></button>
+        </form>
+        </div>
+        <div>
             <button type="submit" class="right-align-div"><h3>Logga ut</h3></button>
         </form>
     </div>
