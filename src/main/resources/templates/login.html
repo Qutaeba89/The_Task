@@ -3,28 +3,37 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/baselayout}">
 
+      <head>
+        <link rel="stylesheet" type="text/css" href="loginStyle.css">
+        </head>
 
-    <div layout:fragment="main-content">
+        <body>
+        <div layout:fragment="main-content">
 
         <h2>Login sida för "The Task" grupp 5</h2>
 
-        <div th:if="${error}" >
-            <p th:text="${error}">Fel användarnamn eller lösenord.</p>
-        </div>
 
-        <form th:action="@{/login}" method="post">
-            <label for="username">Användarnamn:</label>
-            <input type="text" id="username" name="username" required><br>
 
-            <label for="password">Lösenord:</label>
-            <input type="password" id="password" name="password" required><br>
+        <div class="login-container">
+            <form th:action="@{/login}" method="post">
+                <label for="username">Användarnamn:</label>
+                <input type="text" id="username" name="username" required><br>
 
-            <button type="submit">Logga in</button>
-        </form>
+                <label for="password">Lösenord:</label>
+                <input type="password" id="password" name="password" required><br>
 
-        <p>Har du inte ett konto?
-            <a th:href="@{/register}">Registrera dig här</a>
-        </p>
+                <div th:if="${error}" >
+                    <p th:text="${error}">Fel användarnamn eller lösenord.</p>
+                </div>
+
+                <button type="submit">Logga in</button>
+            </form>
+
+
+            <p>Har du inte ett konto?
+                <a th:href="@{/register}">Registrera dig här</a>
+            </p>
+            </div>
     </div>
-
+</body>
 </html>
