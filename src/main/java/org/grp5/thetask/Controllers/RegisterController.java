@@ -14,7 +14,7 @@ import static org.grp5.thetask.Constants.Attributes.ERROR;
 import static org.grp5.thetask.Constants.Attributes.MESSAGE;
 
 @Controller
-public class UserController {
+public class RegisterController {
     private final List<User> users = new ArrayList<>();
 
     @GetMapping("/register")
