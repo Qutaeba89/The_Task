@@ -17,7 +17,6 @@ import java.util.Date;
 @Controller
 public class DashboardController {
 
-
     @GetMapping("/dashboard")
     public String getDashboard(HttpSession session, Model model) {
         String currentUsername = (String) session.getAttribute("username");
@@ -54,14 +53,15 @@ public class DashboardController {
 
         return "redirect:/dashboard";
     }
+
     @PostMapping("/dashboard/deleteList")
-    public String deleteTodoList(HttpSession session,@RequestParam("listId") int listId){
+    public String deleteTodoList(HttpSession session, @RequestParam("listId") int listId) {
         String username = (String) session.getAttribute("username");
-        if(username ==null){
+        if (username == null) {
             return "redirect:/login";
         }
         User currenUser = PretendDatabase.getUser(username);
-        if(currenUser ==null){
+        if (currenUser == null) {
             return "redirect:/login";
         }
         currenUser.deleteTodoList(listId);
@@ -69,25 +69,27 @@ public class DashboardController {
     }
 
     @PostMapping("/dashboard/deleteTask")
-    public String deleteTodoTask(HttpSession session,@RequestParam("listId") int listId, @RequestParam ("taskId") long taskId){
+    public String deleteTodoTask(HttpSession session, @RequestParam("listId") int listId,
+            @RequestParam("taskId") long taskId) {
         String username = (String) session.getAttribute("username");
-        if(username ==null){
+        if (username == null) {
             return "redirect:/login";
         }
         User currenUser = PretendDatabase.getUser(username);
-        if(currenUser ==null){
+        if (currenUser == null) {
             return "redirect:/login";
         }
-       TodoList todoList = currenUser.getTodoList(listId);
-       if(todoList !=null){
-        todoList.getTasks().removeIf(task -> task.getTaskId() == taskId);
-       }
+        TodoList todoList = currenUser.getTodoList(listId);
+        if (todoList != null) {
+            todoList.getTasks().removeIf(task -> task.getTaskId() == taskId);
+        }
         return "redirect:/dashboard";
     }
 
     // get task by id
     @PostMapping("/dashboard/createTask")
-    public String createTask(HttpSession session, @RequestParam("taskTitle") String taskTitle, @RequestParam("listId") int listId, @RequestParam("deadline") String deadline) {
+    public String createTask(HttpSession session, @RequestParam("taskTitle") String taskTitle,
+            @RequestParam("listId") int listId, @RequestParam("deadline") String deadline) {
         String username = (String) session.getAttribute("username");
         if (username == null) {
             return "redirect:/login";
@@ -98,16 +100,16 @@ public class DashboardController {
             return "redirect:/login";
         }
 
-        //get todolist by id
+        // get todolist by id
         TodoList todoList = currentUser.getTodoList(listId);
         if (todoList != null) {
-            //set to -1 if input not provided
+            // set to -1 if input not provided
             long timeInMilliSecDeadline = -1;
-            //if input then this:  
+            // if input then this:
             if (deadline != null && !deadline.isEmpty()) {
                 timeInMilliSecDeadline = convertToMilliSeconds(deadline);
             }
-           
+
             // Create new todotask
             long taskId = System.currentTimeMillis();
             todoList.createTodoTask(taskId, taskTitle, timeInMilliSecDeadline);
@@ -118,16 +120,16 @@ public class DashboardController {
 
     // converter for deadline time
     private long convertToMilliSeconds(String deadline) {
-        if( deadline == null || deadline.isEmpty()){
-            return -1; //set -1 to return no dealine fooling the standard
+        if (deadline == null || deadline.isEmpty()) {
+            return -1; // set -1 to return no dealine fooling the standard
         }
-            try {
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
-                Date date = sdf.parse(deadline);
-                return date.getTime();
-            } catch (Exception e) {
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+            Date date = sdf.parse(deadline);
+            return date.getTime();
+        } catch (Exception e) {
 
-            return -1; //if we get error default to no deadline
+            return -1; // if we get error default to no deadline
         }
     }
 
