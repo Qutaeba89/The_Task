@@ -46,7 +46,12 @@
                             <input type="checkbox" th:checked="${task.isTaskStatus()}">
                         </div>
                     </div>
-
+                    <!-- Delete Task Button for this task -->
+                    <form th:action="@{/dashboard/deleteTask}" method="post">
+                        <input type="hidden" name="listId" th:value="${todoList.id}">
+                        <input type="hidden" name="taskId" th:value="${task.taskId}">
+                        <button type="submit">Radera Uppgift</button>
+                    </form>
 
                 </div>
 
