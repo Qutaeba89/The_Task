@@ -19,7 +19,6 @@
 
 #body-dashboard-div {
     display: flex;
-
     background-color: red;
     align-items: center;
 }
@@ -30,16 +29,21 @@
 
 .list-div {
     margin: 15px;
+    padding: 5px;
     border: 2px solid black;
-    background-color: gray;
+    border-radius: 8px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+    background-color: #dedede;
+    text-align: center;
     min-width: 250px;
-
+    max-width: 500px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .list-header {
     margin-left: 5px;
 }
-
 
 .div-border {
     border-bottom: 2px solid black;
@@ -48,9 +52,101 @@
 }
 
 .task-div {
-    border-top: 2px solid black;
-    margin-left: 5px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 2px solid black;
+    border-radius: 8px;
+    text-align: left;
+    margin-bottom: 5px;
+    display: flex;
+    min-height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
 
+
+.task-left-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*min-height: 5px;*/
+    height: 100%;
+
+}
+
+.task-left-div-top {
+    font-size: 25px;
+    /*background-color: lightblue;*/
+}
+
+.task-left-div-bottom {
+    font-size: 20px;
+    /*background-color: lightcoral;*/
+    margin-top: auto;
+}
+
+
+.task-right-div {
+    display: flex;
+    flex-direction: column;
+    /*height: auto;*/
+    justify-content: space-between;
+}
+
+.task-right-div-top {
+
+    font-size: 25px;
+
+}
+
+.task-right-div-bottom {
+    display: flex;
+
+    justify-content: right;
+}
+
+.task-right-div-bottom input[type="checkbox"] {
+    transform: scale(3.5);
+    margin: 20px;
+}
+
+#form-add-task {
+    background-color: #ffffff;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 10px;
+}
+
+#form-add-task form {
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+}
+
+#form-add-task form button {
+
+}
+
+#form-add-task form input[type="text"] {
+    font-size: 20px;
+    width: auto;
+    margin-right: 10px;
+}
+
+#form-add-task-bottom {
+    display: flex;
+    font-size: 20px;
+    align-content: space-between;
+    justify-content: center;
+    margin: 5px;
+
+}
+
+#form-add-task form input[type="datetime-local"] {
+    font-size: 15px;
+    width: auto;
+    margin-left: 10px;
 }
 
 #add-task-list-div {
@@ -59,6 +155,7 @@
     align-items: center;
     padding: 10px;
 }
+
 
 .status-overdue {
     color: red;
