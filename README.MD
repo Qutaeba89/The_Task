@@ -26,7 +26,7 @@ _______________________
         - [x] login -> dashboard
         - [x] login -> register
         - [x] register -> login
-        - [ ] dashboard - login
+        - [x] dashboard - login
 - [ ] Fragments html (arv/Extends/interface) (Måste inte användas)
     - [ ] Task-div
     - [ ] List-div
@@ -80,7 +80,7 @@ _______________________
 
 - **TodoTask**
     - [x] Kunna hämta title
-    - [ ] Kunna hämta deadline
+    - [x] Kunna hämta deadline
 
 - **Check klass**
     - [x] Kontrollera om login uppgifter stämmer - boolean
@@ -122,20 +122,20 @@ _______________________
                 - [ ] spara i backend att task klar? (om behov finns)
             - [ ] Färg vanligt -> basfärg
             - [x] visa title/name på task
-            - [ ] färgändring om deadline nådd (röd)
-            - [ ] visa deadline på något sätt. ( extra spicy)
+            - [x] färgändring om deadline nådd (röd)
+            - [x] visa deadline på något sätt. ( extra spicy)
     - [x] Header med username + välkommen
     - [x] Skapa divs för list, task och todoadd view
       - [x] TodoList div
       - [x] TodoTask div 
       - [x] TodoAdd div
-    - [ ] Knapp för skapa ny lista
-        - [ ] Knappens plats är där nästa lista ska skapas
-    - [ ] Knapp för ny task (Sitter i listan)
-    - [ ] Yta för hantera ny lista/task
-        - [ ] txt field för Title/name
-        - [ ] txt field kunna sätta Deadline (ej för lista) (ska finnas någon html kod för detta, kalender?)
-        - [ ] Knapp för skapa lista / task
+    - [x] Knapp för skapa ny lista
+        - [x] Knappens plats är där nästa lista ska skapas
+    - [x] Knapp för ny task (Sitter i listan)
+    - [x] Yta för hantera ny lista/task
+        - [x] txt field för Title/name
+        - [x] txt field kunna sätta Deadline (ej för lista) (ska finnas någon html kod för detta, kalender?)
+        - [x] Knapp för skapa lista / task
             - [ ] vid skapade så blir ytan tom.
         - [ ] Visa vilken lista den tillhör - om det är en task - txt fält
     - [x] knapp för logout
@@ -168,10 +168,10 @@ _______________________
         - [x] skicka felmedelande till user
 
 - **Dashboard**
-    - [ ] Hantera skapande av ny lista
-        - [ ] spara i user objectet
-        - [ ] visa nya listan
-    - [ ] Hantera skapande av ny task
-        - [ ] spara i korrekt lista
-    - [ ] Redirect till login om ingen session finns. 
+    - [x] Hantera skapande av ny lista
+        - [x] spara i user objectet
+        - [x] visa nya listan
+    - [x] Hantera skapande av ny task
+        - [x] spara i korrekt lista
+    - [x] Redirect till login om ingen session finns. 
       - (ska inte kunna gå att nå dashboard utloggad)
