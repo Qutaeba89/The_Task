@@ -25,6 +25,8 @@
 
 .list-div-holder {
     display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
 }
 
 .list-div {
