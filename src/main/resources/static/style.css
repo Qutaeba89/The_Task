@@ -25,6 +25,8 @@
 
 .list-div-holder {
     display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
 }
 
 .list-div {
@@ -100,16 +102,22 @@
 }
 
 .task-right-div-bottom {
-    display: flex;
-
+    display: flex; 
     justify-content: right;
 }
 
 .task-right-div-bottom input[type="checkbox"] {
-    transform: scale(3.5);
+    transform: scale(1.5);
     margin: 20px;
+    position: relative;
+    top: -15px;
+    left: 135px;
 }
-
+.Redera-button{
+    margin: 10px;
+    position: relative;
+    top: 15px;
+}
 #form-add-task {
     background-color: #ffffff;
     border: 2px solid black;
@@ -152,11 +160,15 @@
 #add-task-list-div {
     background-color:  #4CAF50;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items:center;
     padding: 10px;
 }
 
-
+#form-add-task-top{
+    display: flex;
+    align-items: start;
+}
 .status-overdue {
     color: red;
     font-weight: bold;

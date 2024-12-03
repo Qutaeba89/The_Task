@@ -33,7 +33,7 @@ public class User {
     public void createTodoList(int id, String title) {
         TodoList todoList = new TodoList(id, title);
         // adding placeholder task
-        todoList.createTodoTask(1, "Exempeluppgift", System.currentTimeMillis() + 10000000);
+        // todoList.createTodoTask(1, "Exempeluppgift", System.currentTimeMillis() + 10000000);<<< is not needed
         userLists.add(todoList);
     }
     

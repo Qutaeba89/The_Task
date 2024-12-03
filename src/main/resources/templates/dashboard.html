@@ -40,19 +40,17 @@
                             <span th:if="${task.deadlinePassed()}" class="status-overdue">&#9888; Försenad</span>
                             <!--                            <span th:if="${!task.deadlinePassed()}" class="status-on-time">&#9989; I tid</span>-->
                         </div>
-
                         <div class="task-right-div-bottom">
+                        <input type="checkbox" th:checked="${task.isTaskStatus()}">
+                    </div>
 
-                            <input type="checkbox" th:checked="${task.isTaskStatus()}">
-                        </div>
                     </div>
                     <!-- Delete Task Button for this task -->
                     <form th:action="@{/dashboard/deleteTask}" method="post">
                         <input type="hidden" name="listId" th:value="${todoList.id}">
                         <input type="hidden" name="taskId" th:value="${task.taskId}">
-                        <button type="submit">Radera Uppgift</button>
+                        <button type="submit" class="Redera-button">Radera Uppgift</button>
                     </form>
-
                 </div>
 
                 <!-- FOrm to add task in list-->
@@ -64,13 +62,10 @@
                             <input type="text" id="taskTitle" name="taskTitle" placeholder="Ny Uppgift" required>
                         </div>
 
-
                         <div id="form-add-task-bottom">
                             <label for="deadline">Klart senast:</label>
                             <input type="datetime-local" id="deadline" name="deadline" required>
                         </div>
-
-
 
                         <button type="submit">Lägg till ny</button>
                     </form>
@@ -87,7 +82,7 @@
     <!-- Form for creating a new Todo list -->
     <div id="add-task-list-div">
         <form th:action="@{/dashboard/createList}" method="post">
-            <label for="task-list-title">Skapa ny "Att göra" lista</label>
+            <label for="task-list-title">Skapa ny "Att göra" lista</label><br>
             <input type="text" id="task-list-title" name="title" required><br>
             <button type="submit">Skapa ny att-göra lista</button>
         </form>
