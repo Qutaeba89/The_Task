@@ -166,3 +166,7 @@
     color: green;
     font-weight: bold;
 }
+
+.completed-task {
+    text-decoration: line-through;
+}
