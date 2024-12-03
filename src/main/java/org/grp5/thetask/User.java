@@ -54,5 +54,10 @@ public class User {
         userLists.removeIf(list -> list.getId() == listId);
     }
     
+    public void deleteTodoTask(long taskId){
+        for (TodoList list : userLists) {
+            list.getTasks().removeIf(task -> task.getTaskId()== taskId);
+        }
+    }
 
 }

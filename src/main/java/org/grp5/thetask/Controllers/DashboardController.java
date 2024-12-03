@@ -68,6 +68,23 @@ public class DashboardController {
         return "redirect:/dashboard";
     }
 
+    @PostMapping("/dashboard/deleteTask")
+    public String deleteTodoTask(HttpSession session,@RequestParam("listId") int listId, @RequestParam ("taskId") long taskId){
+        String username = (String) session.getAttribute("username");
+        if(username ==null){
+            return "redirect:/login";
+        }
+        User currenUser = PretendDatabase.getUser(username);
+        if(currenUser ==null){
+            return "redirect:/login";
+        }
+       TodoList todoList = currenUser.getTodoList(listId);
+       if(todoList !=null){
+        todoList.getTasks().removeIf(task -> task.getTaskId() == taskId);
+       }
+        return "redirect:/dashboard";
+    }
+
     // get task by id
     @PostMapping("/dashboard/createTask")
     public String createTask(HttpSession session, @RequestParam("taskTitle") String taskTitle, @RequestParam("listId") int listId, @RequestParam("deadline") String deadline) {
