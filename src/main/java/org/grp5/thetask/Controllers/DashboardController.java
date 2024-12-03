@@ -54,6 +54,19 @@ public class DashboardController {
 
         return "redirect:/dashboard";
     }
+    @PostMapping("/dashboard/deleteList")
+    public String deleteTodoList(HttpSession session,@RequestParam("listId") int listId){
+        String username = (String) session.getAttribute("username");
+        if(username ==null){
+            return "redirect:/login";
+        }
+        User currenUser = PretendDatabase.getUser(username);
+        if(currenUser ==null){
+            return "redirect:/login";
+        }
+        currenUser.deleteTodoList(listId);
+        return "redirect:/dashboard";
+    }
 
     // get task by id
     @PostMapping("/dashboard/createTask")
