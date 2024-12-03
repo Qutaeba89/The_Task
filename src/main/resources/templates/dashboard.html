@@ -27,30 +27,48 @@
 
                 <!-- Task div for each task in that list-->
                 <div class="task-div" th:each="task : ${todoList.tasks}">
-                    <div><label th:text="${task.title}">Task title</label></div>
-                    <span th:if="${task.deadlinePassed()}" class="status-overdue">&#9888; Försenad</span>
-                    <span th:if="${!task.deadlinePassed()}" class="status-on-time">&#9989; I tid</span>
-                    <div>
-                        <label>Färdigt senast: </label>
-                        <span th:text="${#dates.format(task.getTimeInMilliSecDeadLine(), 'yyyy-MM-dd HH:mm')}">Deadline</span>
+                    <div class="task-left-div">
+                        <div class="task-left-div-top"><label th:text="${task.title}">Task title</label></div>
+                        <div class="task-left-div-bottom">
+                            <label>Färdigt senast: </label>
+                            <span th:text="${#dates.format(task.getTimeInMilliSecDeadLine(), 'yyyy-MM-dd HH:mm')}">Deadline</span>
+                        </div>
                     </div>
-                    <div>
-                        <label>Klar </label>
-                        <input type="checkbox" th:checked="${task.isTaskStatus()}">
+
+                    <div class="task-right-div">
+                        <div class="task-right-div-top">
+                            <span th:if="${task.deadlinePassed()}" class="status-overdue">&#9888; Försenad</span>
+                            <!--                            <span th:if="${!task.deadlinePassed()}" class="status-on-time">&#9989; I tid</span>-->
+                        </div>
+
+                        <div class="task-right-div-bottom">
+
+                            <input type="checkbox" th:checked="${task.isTaskStatus()}">
+                        </div>
                     </div>
+
+
                 </div>
 
                 <!-- FOrm to add task in list-->
-                <form th:action="@{/dashboard/createTask}" method="post">
-                    <input type="hidden" name="listId" th:value="${todoList.id}">
-                    <label for="taskTitle">Skapa ny uppgift:</label>
-                    <input type="text" id="taskTitle" name="taskTitle" required>
+                <div id="form-add-task">
+                    <form th:action="@{/dashboard/createTask}" method="post">
+                        <input type="hidden" name="listId" th:value="${todoList.id}">
+                        <!--                        <label for="taskTitle">Skapa ny uppgift:</label>-->
+                        <div id="form-add-task-top">
+                            <input type="text" id="taskTitle" name="taskTitle" placeholder="Ny Uppgift" required>
+                        </div>
 
-                    <label for="deadline">Klart senast:</label>
-                    <input type="datetime-local" id="deadline" name="deadline" required>
 
-                    <button type="submit">Lägg till ny</button>
-                </form>
+                        <div id="form-add-task-bottom">
+                            <label for="deadline">Klart senast:</label>
+                            <input type="datetime-local" id="deadline" name="deadline" required>
+                        </div>
+
+
+                        <button type="submit">Lägg till ny</button>
+                    </form>
+                </div>
             </div>
 
         </div>
