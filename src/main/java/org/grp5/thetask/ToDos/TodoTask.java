@@ -14,7 +14,11 @@ public class TodoTask {
     }
     
     public boolean deadlinePassed() {
-        return System.currentTimeMillis() > this.timeInMilliSecDeadLine;
+        // checking for No deadline, so it's not considered overdue
+        if (timeInMilliSecDeadLine == -1) {
+            return false; 
+        }
+        return System.currentTimeMillis() > timeInMilliSecDeadLine;
     }
 
     public long getTaskId() {

@@ -101,9 +101,13 @@ public class DashboardController {
         //get todolist by id
         TodoList todoList = currentUser.getTodoList(listId);
         if (todoList != null) {
-
-            long timeInMilliSecDeadline = convertToMilliSeconds(deadline);
-
+            //set to -1 if input not provided
+            long timeInMilliSecDeadline = -1;
+            //if input then this:  
+            if (deadline != null && !deadline.isEmpty()) {
+                timeInMilliSecDeadline = convertToMilliSeconds(deadline);
+            }
+           
             // Create new todotask
             long taskId = System.currentTimeMillis();
             todoList.createTodoTask(taskId, taskTitle, timeInMilliSecDeadline);
@@ -114,13 +118,16 @@ public class DashboardController {
 
     // converter for deadline time
     private long convertToMilliSeconds(String deadline) {
-        try {
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
-            Date date = sdf.parse(deadline);
-            return date.getTime();
-        } catch (Exception e) {
+        if( deadline == null || deadline.isEmpty()){
+            return -1; //set -1 to return no dealine fooling the standard
+        }
+            try {
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+                Date date = sdf.parse(deadline);
+                return date.getTime();
+            } catch (Exception e) {
 
-            return 0;
+            return -1; //if we get error default to no deadline
         }
     }
 

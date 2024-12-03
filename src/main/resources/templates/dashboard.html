@@ -31,7 +31,9 @@
                         <div class="task-left-div-top"><label th:text="${task.title}">Task title</label></div>
                         <div class="task-left-div-bottom">
                             <label>Färdigt senast: </label>
-                            <span th:text="${#dates.format(task.getTimeInMilliSecDeadLine(), 'yyyy-MM-dd HH:mm')}">Deadline</span>
+                            <!-- -1 check-->
+                            <span th:if="${task.getTimeInMilliSecDeadLine() == -1}">Ingen deadline</span>
+                            <span th:if="${task.getTimeInMilliSecDeadLine() != -1}" th:text="${#dates.format(task.getTimeInMilliSecDeadLine(), 'yyyy-MM-dd HH:mm')}">Deadline</span>
                         </div>
                     </div>
 
@@ -64,7 +66,7 @@
 
                         <div id="form-add-task-bottom">
                             <label for="deadline">Klart senast:</label>
-                            <input type="datetime-local" id="deadline" name="deadline" required>
+                            <input type="datetime-local" id="deadline" name="deadline">
                         </div>
 
                         <button type="submit">Lägg till ny</button>
