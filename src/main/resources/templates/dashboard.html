@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layouts/baselayout}">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layouts/baselayout}">
 
 <div layout:fragment="main-content">
 
@@ -33,7 +32,8 @@
                             <label>Färdigt senast: </label>
                             <!-- -1 check-->
                             <span th:if="${task.getTimeInMilliSecDeadLine() == -1}">Ingen deadline</span>
-                            <span th:if="${task.getTimeInMilliSecDeadLine() != -1}" th:text="${#dates.format(task.getTimeInMilliSecDeadLine(), 'yyyy-MM-dd HH:mm')}">Deadline</span>
+                            <span th:if="${task.getTimeInMilliSecDeadLine() != -1}"
+                                th:text="${#dates.format(task.getTimeInMilliSecDeadLine(), 'yyyy-MM-dd HH:mm')}">Deadline</span>
                         </div>
                     </div>
 
@@ -43,8 +43,8 @@
                             <!--                            <span th:if="${!task.deadlinePassed()}" class="status-on-time">&#9989; I tid</span>-->
                         </div>
                         <div class="task-right-div-bottom">
-                        <input type="checkbox" th:checked="${task.isTaskStatus()}">
-                    </div>
+                            <input type="checkbox" th:checked="${task.isTaskStatus()}">
+                        </div>
 
                     </div>
                     <!-- Delete Task Button for this task -->
@@ -72,11 +72,11 @@
                         <button type="submit">Lägg till ny</button>
                     </form>
                 </div>
-                            <!-- Delete button for the list -->
-            <form th:action="@{/dashboard/deleteList}" method="post" class="delete-list-form">
-                <input type="hidden" name="listId" th:value="${todoList.id}">
-                <button type="submit" class="delete-button">Ta bort lista</button>
-            </form>
+                <!-- Delete button for the list -->
+                <form th:action="@{/dashboard/deleteList}" method="post" class="delete-list-form">
+                    <input type="hidden" name="listId" th:value="${todoList.id}">
+                    <button type="submit" class="delete-button">Ta bort lista</button>
+                </form>
             </div>
         </div>
     </div>
@@ -85,7 +85,7 @@
     <div id="add-task-list-div">
         <form th:action="@{/dashboard/createList}" method="post">
             <label for="task-list-title">Skapa ny "Att göra" lista</label><br>
-            <input type="text" id="task-list-title" name="title" required><br>
+            <input type="text" id="task-list-title" name="title" placeholder="Titel på listan" required><br>
             <button type="submit">Skapa ny att-göra lista</button>
         </form>
     </div>
