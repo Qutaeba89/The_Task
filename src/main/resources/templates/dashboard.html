@@ -51,8 +51,12 @@
 
                     <button type="submit">Lägg till ny</button>
                 </form>
+                            <!-- Delete button for the list -->
+            <form th:action="@{/dashboard/deleteList}" method="post" class="delete-list-form">
+                <input type="hidden" name="listId" th:value="${todoList.id}">
+                <button type="submit" class="delete-button">Ta bort lista</button>
+            </form>
             </div>
-
         </div>
     </div>
 
