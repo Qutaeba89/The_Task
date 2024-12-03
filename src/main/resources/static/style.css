@@ -150,7 +150,7 @@
 }
 
 #add-task-list-div {
-    background-color: green;
+    background-color:  #4CAF50;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -163,10 +163,15 @@
 }
 
 .status-on-time {
-    color: green;
+    color:  #4CAF50;
     font-weight: bold;
 }
 
 .completed-task {
     text-decoration: line-through;
 }
+
+.completed-task-background {
+    background-color: #4CAF50; 
+}
+
