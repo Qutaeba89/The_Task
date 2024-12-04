@@ -10,7 +10,7 @@
         </div>
         <form th:action="@{/logout}" method="POST">
             <!--Logout button linked to logout-->
-            <button type="submit" class="del-logout-button">Logga ut</button>
+            <button type="submit" class="right-align-div del-logout-button">Logga ut</button>
 
         </form>
     </div>
@@ -56,6 +56,7 @@
                         </div>
                         <div id="task-bot-mid-div">
                             <span th:if="${task.deadlinePassed()}" class="status-overdue">&#9888; Försenad</span>
+                            
                         </div>
                         <div id="task-bot-right-div">
                             <input type="checkbox" class="checkbox-done">
@@ -84,7 +85,7 @@
                 <!-- Delete button for the list -->
                 <form th:action="@{/dashboard/deleteList}" method="post" class="delete-list-form">
                     <input type="hidden" name="listId" th:value="${todoList.id}">
-                    <button type="submit" class="delete-button">Ta bort lista</button>
+                    <button type="submit" class="delete-button del-logout-button">Ta bort lista</button>
                 </form>
             </div>
         </div>
