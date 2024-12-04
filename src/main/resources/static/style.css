@@ -158,9 +158,30 @@ body {
     padding-bottom: 10px;
 }
 
+
 #task-bot-right-div input[type="checkbox"] {
-    transform: scale(1.5);
-    margin: 5px;
+    transform: scale(2);
+    margin: 10px;
+    position: relative;
+    left: 10px;
+}
+
+#task-bot-right-div input[type="checkbox"]:hover {
+    transform: scale(4.5);
+}
+
+
+.status-overdue {
+    color: red;
+}
+
+
+.completed-task {
+    text-decoration: line-through;
+}
+
+.completed-task-background {
+    background-color: #e0e0e0;
 }
 
 #form-add-task {
@@ -197,6 +218,7 @@ body {
     border-radius: 4px; 
     box-sizing: border-box;
 }
+
 #deadline {
     width: 100%;
     max-width: 100%; 
