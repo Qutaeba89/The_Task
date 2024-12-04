@@ -24,7 +24,7 @@ body {
 }
 .title-login-page{
     position: relative;
-    top: -50px;
+    top: -100px;
 }
 .success-message {
     color: green;
