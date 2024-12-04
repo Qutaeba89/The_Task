@@ -2,7 +2,9 @@ The-Task Grupp 5
 
 Info:
 How to use this app
-If you want to try the app out you can use the login user name: "admin" with the password "admin"
+If you want to try the app out you can use:
+-Login username: "admin"-
+-Password "admin"-
 
 _______________________
 **Kod ordning** *(vad behöver kodas först)*
