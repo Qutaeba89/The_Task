@@ -7,6 +7,7 @@ public class PretendDatabase {
     private static final ArrayList<User> users = new ArrayList<>();
 
     static {
+        users.add(new User("admin", "admin"));
         users.add(new User("Dennis", "hej123"));
         users.add(new User("Farre", "test123"));
         users.add(new User("Qutaiba", "password123"));
