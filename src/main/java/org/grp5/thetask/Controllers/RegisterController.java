@@ -1,6 +1,7 @@
 package org.grp5.thetask.Controllers;
 
 
+import org.grp5.thetask.Check;
 import org.grp5.thetask.PretendDatabase;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,19 +20,20 @@ public class RegisterController {
         return "register";
     }
 
-@PostMapping("/register")
-public String registerUser(@RequestParam String username, @RequestParam String password, @RequestParam String confirmePassword, Model model) {
-    if (PretendDatabase.getUser(username)!=null) {
-        model.addAttribute(ERROR, "Användarnamnet finns redan!");
-        return "register";
+    @PostMapping("/register")
+    public String registerUser(@RequestParam String username, @RequestParam String password, @RequestParam String confirmePassword, Model model) {
+        if (Check.isUserInDatabase(username)) {
+            model.addAttribute(ERROR, "Användarnamnet finns redan!");
+            return "register";
         }
-    if (!password.equals(confirmePassword)) {
-        model.addAttribute(ERROR, "Lösenordet är inte samma!");
+
+        if (!password.equals(confirmePassword)) {
+            model.addAttribute(ERROR, "Lösenorden matchar inte varandra!");
+            return "register";
+        }
+
+        PretendDatabase.addUser(username, password);
+        model.addAttribute(MESSAGE, "Registrering Lyckades! Logga in.");
         return "register";
     }
-    PretendDatabase.addUser(username,password);
-    model.addAttribute(MESSAGE, "Registrering Lyckades! Logga in.");
-    // return "redirect:/login";
-    return "register";
-}
 }

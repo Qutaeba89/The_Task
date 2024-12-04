@@ -167,7 +167,7 @@ body {
 }
 
 #task-bot-right-div input[type="checkbox"]:hover {
-    transform: scale(4.5);
+    transform: scale(2.5);
 }
 
 
