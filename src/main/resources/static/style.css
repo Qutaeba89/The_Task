@@ -2,6 +2,7 @@
     padding: 10px;
     margin: 20px;
     background-color: pink;
+    
 }
 
 .right-align-div button {
@@ -71,6 +72,7 @@
     padding: 0;
 }
 
+
 #task-top-div {
     display: flex;
     justify-content: space-between;
@@ -138,8 +140,10 @@
 }
 
 #task-bot-right-div input[type="checkbox"] {
-    transform: scale(4);
+    transform: scale(2);
     margin: 10px;
+    position: relative;
+    left: 10px;
 }
 
 #task-bot-right-div input[type="checkbox"]:hover {
@@ -233,9 +237,15 @@ button {
 
 .del-logout-button {
     background-color: #d02424;
+    position: relative;
+    left: -10px;
 }
 
 .del-logout-button:hover {
+    background-color: #b70000;
+
+}
+.delete-button{
     background-color: #b70000;
 
 }
