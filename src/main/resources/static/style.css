@@ -2,7 +2,7 @@
     padding: 10px;
     margin: 20px;
     background-color: pink;
-    
+
 }
 
 .right-align-div button {
@@ -245,7 +245,8 @@ button {
     background-color: #b70000;
 
 }
-.delete-button{
+
+.delete-button {
     background-color: #b70000;
 
 }
@@ -303,3 +304,6 @@ button {
     fill: #FF5733;
 }
 
+.hidden {
+    display: none;
+}
