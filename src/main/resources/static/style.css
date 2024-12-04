@@ -4,6 +4,10 @@
     background-color: pink;
 }
 
+.right-align-div button {
+    background-color: red;
+}
+
 .left-align-div {
     padding: 10px;
     margin: 20px;
@@ -20,13 +24,13 @@
 #body-dashboard-div {
     display: flex;
     background-color: red;
-    align-items: center;
+    /*align-items: center;*/
 }
 
 .list-div-holder {
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
 .list-div {
@@ -36,7 +40,7 @@
     border-radius: 8px;
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
     background-color: #dedede;
-    text-align: center;
+    text-align: left;
     min-width: 250px;
     max-width: 500px;
     font-size: 20px;
@@ -45,6 +49,7 @@
 
 .list-header {
     margin-left: 5px;
+    text-align: center;
 }
 
 .div-border {
@@ -53,129 +58,209 @@
     margin-bottom: 10px;
 }
 
+
 .task-div {
-    padding: 5px;
+    /*padding: 10px;*/
     background-color: #ffffff;
-    border: 2px solid black;
+    border: 2px solid #cccccc;
     border-radius: 8px;
-    text-align: left;
-    margin-bottom: 5px;
-    display: flex;
-    min-height: 50px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.task-left-div {
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /*min-height: 5px;*/
-    height: 100%;
-
+    padding: 0;
 }
 
-.task-left-div-top {
-    font-size: 25px;
-    /*background-color: lightblue;*/
-}
-
-.task-left-div-bottom {
-    font-size: 20px;
-    /*background-color: lightcoral;*/
-    margin-top: auto;
-}
-
-
-.task-right-div {
+#task-top-div {
     display: flex;
-    flex-direction: column;
-    /*height: auto;*/
     justify-content: space-between;
+    /*align-items: center;*/
+    margin-bottom: 10px;
 }
 
-.task-right-div-top {
-
-    font-size: 25px;
-
-}
-
-.task-right-div-bottom {
-    display: flex; 
-    justify-content: right;
-}
-
-.task-right-div-bottom input[type="checkbox"] {
-    transform: scale(1.5);
-    margin: 20px;
-    position: relative;
-    top: -15px;
-    left: 135px;
-}
-.Redera-button{
-    margin: 10px;
-    position: relative;
-    top: 15px;
-}
-#form-add-task {
-    background-color: #ffffff;
-    border: 2px solid black;
-    border-radius: 8px;
-    padding: 8px;
-    margin: 10px;
-}
-
-#form-add-task form {
-    display: flex;
-    align-content: space-between;
-    flex-direction: column;
-}
-
-#form-add-task form button {
-
-}
-
-#form-add-task form input[type="text"] {
+#task-top-left-div {
     font-size: 20px;
-    width: auto;
-    margin-right: 10px;
-}
-
-#form-add-task-bottom {
-    display: flex;
-    font-size: 20px;
-    align-content: space-between;
-    justify-content: center;
-    margin: 5px;
-
-}
-
-#form-add-task form input[type="datetime-local"] {
-    font-size: 15px;
-    width: auto;
-    margin-left: 10px;
-}
-
-#add-task-list-div {
-    background-color:  #4CAF50;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
+    font-weight: bold;
     padding: 10px;
 }
 
-#form-add-task-top{
+#task-top-right-div {
+    display: flex;
+
+}
+
+.trashcan-btn {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.trashcan-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: #FD3B3B;
+}
+
+.trashcan-btn:hover {
+    transform: scale(1.5);
+}
+
+
+#task-bot-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 10px;
+}
+
+#task-bot-left-div {
+    /*font-size: 16px;*/
+    font-size: 20px;
+    color: #777;
+
+}
+
+#task-bot-mid-div {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#task-bot-right-div {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+#task-bot-right-div input[type="checkbox"] {
+    transform: scale(4);
+    margin: 10px;
+}
+
+#task-bot-right-div input[type="checkbox"]:hover {
+    transform: scale(4.5);
+
+    /*margin: 10px;*/
+}
+
+/* Status Overdue */
+.status-overdue {
+    color: red;
+}
+
+/* Task Completed / Strikethrough */
+.completed-task {
+    text-decoration: line-through;
+}
+
+.completed-task-background {
+    background-color: #e0e0e0;
+}
+
+#form-add-task {
+    background-color: #f9f9f9;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    padding: 20px;
+    /*width: 100%;*/
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#form-add-task-top {
+    margin-bottom: 20px;
+}
+
+#taskTitle {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+#taskTitle:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#form-add-task-bottom {
+    margin-bottom: 20px;
+}
+
+#deadline {
+    /*width: 100%;*/
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+#deadline:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-button {
+    background-color: #007bff;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+.del-logout-button {
+    background-color: #d02424;
+}
+
+.del-logout-button:hover {
+    background-color: #b70000;
+
+}
+
+
+#add-task-list-div {
+    background-color: #4CAF50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#form-add-task-top {
     display: flex;
     align-items: start;
 }
+
 .status-overdue {
     color: red;
     font-weight: bold;
 }
 
 .status-on-time {
-    color:  #4CAF50;
+    color: #4CAF50;
     font-weight: bold;
 }
 
@@ -184,6 +269,27 @@
 }
 
 .completed-task-background {
-    background-color: #4CAF50; 
+    background-color: #4CAF50;
+}
+
+.trashcan-btn {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.trashcan-btn:hover {
+    transform: scale(1.4);
+}
+
+.trashcan-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: #FF5733;
 }
 
