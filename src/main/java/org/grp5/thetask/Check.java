@@ -31,7 +31,8 @@ public class Check {
     }
 
     public static User getUserIfActive(HttpSession session) {
-        String username = session.getAttribute(USERNAME).toString();
+
+        String username = (String) session.getAttribute(USERNAME);
         if (username == null)
             return null;
 
