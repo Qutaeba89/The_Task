@@ -7,6 +7,7 @@ public class TodoList {
     private final ArrayList<TodoTask> tasks = new ArrayList<>();
     private final int id;
     private final String title;
+    private int lastTaskId = 0;
 
     // COnstruktor
     public TodoList(int id, String title) {
@@ -15,8 +16,12 @@ public class TodoList {
     }
 
     // Create new todo and add to list
-    public void createTodoTask(long taskId, String title, long deadline) {
-        tasks.add(new TodoTask(taskId, title, deadline));
+    public void createTodoTask(String title, long deadline) {
+        tasks.add(new TodoTask(lastTaskId++, title, deadline));
+    }
+
+    public boolean deleteTask(int taskId) {
+        return tasks.removeIf(task -> task.getTaskId() == taskId);
     }
 
     //Get specific todo based on id
