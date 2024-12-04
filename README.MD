@@ -3,8 +3,8 @@ The-Task Grupp 5
 Info:
 How to use this app
 If you want to try the app out you can use:
--Login username: "admin"-
--Password "admin"-
+Login username: "admin"
+Password "admin"
 
 _______________________
 **Kod ordning** *(vad behöver kodas först)*
@@ -23,18 +23,25 @@ _______________________
 
 **Phase 2**
 
-- [ ] Controllers
-    - [ ] Login post
+- [x] Controllers
+    - [x] Login post
     - [x] register post
     - [x] Hantera skapande av ny lista/task
-    - [ ] Få Mappings att funka
+    - [x] Få Mappings att funka
         - [x] login -> dashboard
         - [x] login -> register
         - [x] register -> login
         - [x] dashboard - login
 
-**Phase 3**
+**Phase 3** 
+- [ ] Synka så samma stil på alla sidor (Samma tema/intryck)
+    - [ ] Bakgrund 
+    - [ ] 
+- [ ] Fixa div - inte relativ till längsta lista **Extra krydda**
+- [ ] 
+- [ ] 
 
+**Phase 4**
 - [ ] Testar som galningar
 
 _______________________
@@ -96,7 +103,7 @@ _______________________
     
     - [x] POST för login uppgifter
     - [x] Visa felmedelande vid misslyckat inlogg
-    - [ ] Visa felmedelande vid saknad username/password i input fälten
+    - [x] Visa felmedelande vid saknad username/password i input fälten
     - [x] Vid lyckad inlogg, redirect till dashboard
     - [x] Skapa knapp för login
     - [x] Skapa txt fält username, password
@@ -120,7 +127,7 @@ _______________________
             - [x] checkbox för klar - (byta färg till grön(extra krydda))
                 - [ ] deadline blockas när task klar.(inaktiveras / triggas ej / checkas ej / lös det bara)
                 - [x] kan unchecka checkboxen (extra krydda)
-                - [ ] spara i backend att task klar? (om behov finns)
+                - [ ] spara i backend att task klar. ("Task status?")
             - [ ] Färg vanligt -> basfärg
             - [x] visa title/name på task
             - [x] färgändring om deadline nådd (röd)
@@ -137,8 +144,6 @@ _______________________
         - [x] txt field för Title/name
         - [x] txt field kunna sätta Deadline (ej för lista) (ska finnas någon html kod för detta, kalender?)
         - [x] Knapp för skapa lista / task
-            - [ ] vid skapade så blir ytan tom.
-        - [ ] Visa vilken lista den tillhör - om det är en task - txt fält
     - [x] knapp för logout
         - [x] redirect till loginpage
             - [ ] visa medelande "välkommen åter!" (extra krydda)
