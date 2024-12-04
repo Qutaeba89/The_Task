@@ -293,3 +293,7 @@ button {
 #add-task-list-div button:hover {
     background-color: #45a049;
 }
+
+.hidden {
+    display: none;
+}
