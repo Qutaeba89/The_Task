@@ -27,10 +27,6 @@ _______________________
         - [x] login -> register
         - [x] register -> login
         - [x] dashboard - login
-- [ ] Fragments html (arv/Extends/interface) (Måste inte användas)
-    - [ ] Task-div
-    - [ ] List-div
-    - [ ] Add 'TaskList' rutan-div
 
 **Phase 3**
 
@@ -118,7 +114,7 @@ _______________________
         - [x] Visa tasks som tillhör listan
             - [x] checkbox för klar - (byta färg till grön(extra krydda))
                 - [ ] deadline blockas när task klar.(inaktiveras / triggas ej / checkas ej / lös det bara)
-                - [ ] kan unchecka checkboxen (extra krydda)
+                - [x] kan unchecka checkboxen (extra krydda)
                 - [ ] spara i backend att task klar? (om behov finns)
             - [ ] Färg vanligt -> basfärg
             - [x] visa title/name på task
