@@ -42,3 +42,54 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+//This is for checking deadlines
+setInterval(calcDeadlines, 1000);
+
+function calcDeadlines() {
+
+    const taskDivs = document.querySelectorAll('.task-div');
+    if (taskDivs === null)
+        return;
+
+    taskDivs.forEach((task, index) => {
+
+            // If checkbox is checked, no point in going further.
+            const checkBox = task.querySelector(".checkbox-done");
+            if (checkBox === null || checkBox.checked)
+                return;
+
+            const midDiv = task.querySelector('#task-bot-mid-div');
+            if (midDiv === null)
+                return;
+
+            if (midDiv.childElementCount >= 1)
+                return;
+
+            // Gets the deadline span with the deadline
+            const deadlineSpan = task.querySelector('.deadline-span');
+            if (deadlineSpan === null)
+                return;
+
+            const dateString = deadlineSpan.textContent;
+
+            //Adding seconds as it requires it for the format to work
+            const dateTimeSec = new Date(dateString + ":00");
+            const deadline = dateTimeSec.getTime();
+            const now = Date.now();
+
+            if (now >= deadline) {
+                //Add span in task-bot-mid-div
+                const newSpan = document.createElement("span");
+                newSpan.textContent = '⚠ Försenad';
+                newSpan.classList.add('status-overdue');
+                midDiv.appendChild(newSpan);
+
+            }
+        }
+    );
+
+
+}
+
+
