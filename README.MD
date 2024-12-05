@@ -34,8 +34,8 @@ _______________________
         - [x] dashboard - login
 
 **Phase 3** 
-- [ ] Synka så samma stil på alla sidor (Samma tema/intryck)
-    - [ ] Bakgrund 
+- [x] Synka så samma stil på alla sidor (Samma tema/intryck)
+    - [x] Bakgrund 
     - [ ] 
 - [ ] Fixa div - inte relativ till längsta lista **Extra krydda**
 - [ ] 
