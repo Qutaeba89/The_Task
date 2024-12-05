@@ -83,5 +83,12 @@ public class User {
         return false;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
+    public boolean updateTaskStatus(boolean status, int listId, int taskId) {
+        TodoList list = getTodoList(listId);
+        if (list != null)
+            return list.updateTaskStatus(status, taskId);
 
+        return false;
+    }
 }

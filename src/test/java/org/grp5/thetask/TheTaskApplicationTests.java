@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.grp5.thetask.ToDos.TodoList;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -20,14 +19,14 @@ class TheTaskApplicationTests {
     @Test
     public void testCorrectPasswordLogin() {
         //variables
-       String correctUsername = "admin";
-       String correctPassword = "admin";
+        String correctUsername = "admin";
+        String correctPassword = "admin";
 
         // logIn is true by checking username and pw using method from "Check".
-       boolean isLoggedIn = Check.isLoginCredentialsCorrect(correctUsername, correctPassword);
+        boolean isLoggedIn = Check.isLoginCredentialsCorrect(correctUsername, correctPassword);
 
         // check if inlogg is correct
-      assertTrue(isLoggedIn, "Inloggning med rätt användarnamn och lösenord ska lyckas");
+        assertTrue(isLoggedIn, "Inloggning med rätt användarnamn och lösenord ska lyckas");
     }
 
 
@@ -59,16 +58,18 @@ class TheTaskApplicationTests {
     //     assertEquals("22", user.getPassword());
     // }
 
-    // @Test
-    // public void testIsDeadLineOver() {
+    @Test
+    public void testIsDeadLineOver() {
 
-    //     long currentTime = System.currentTimeMillis();
-    //     long oneHour = 1000 * 60 * 60;
-    //     long inFuture = currentTime + oneHour;
-    //     long inPast = currentTime - oneHour;
+        long currentTime = System.currentTimeMillis();
+        long oneHour = 1000 * 60 * 60;
+        long inFuture = currentTime + oneHour;
+        long inPast = currentTime - oneHour;
 
-    //     TodoTask task = new TodoTask(0, null, 0);
-    //     assertTrue(task.isDeadLinePassed(inPast));
-    //     assertFalse(task.isDeadLinePassed(inFuture));
-    // }
+        TodoTask taskInFuture = new TodoTask(0, null, inFuture);
+        TodoTask taskInPast = new TodoTask(0, null, inPast);
+
+        assertFalse(taskInFuture.isDeadlinePassed());
+        assertTrue(taskInPast.isDeadlinePassed());
+    }
 }
