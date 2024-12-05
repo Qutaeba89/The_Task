@@ -1,10 +1,17 @@
+package org.grp5.thetask.Controllers;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
 import static org.grp5.thetask.Constants.Attributes.*;
+
+import org.grp5.thetask.Check;
 
 @Controller
 public class LoginController {
@@ -13,7 +20,7 @@ public class LoginController {
     // Checks for session username
     // If it exists, redirect to dashboard
     // else, return login page.
-    @RequestMapping(value = {"/login", "/"}, method = RequestMethod.GET)
+    @RequestMapping(value = { "/login", "/" }, method = RequestMethod.GET)
     public String showLoginPage(HttpServletRequest request) {
 
         if (Check.isUserAlreadyLoggedIn(request))
@@ -23,7 +30,8 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String loginUser(HttpSession session, Model model, @RequestParam String username, @RequestParam String password) {
+    public String loginUser(HttpSession session, Model model, @RequestParam String username,
+            @RequestParam String password) {
         // Checks if user exist, then if pw matches.
         // else sends error msg.
         if (Check.isLoginCredentialsCorrect(username, password)) {
@@ -38,7 +46,7 @@ public class LoginController {
     // Logout contoller if needed
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logoutUser(HttpSession session) {
-        session.invalidate();  // deleting session
+        session.invalidate(); // deleting session
         return "redirect:/login";
     }
 }
