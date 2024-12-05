@@ -3,8 +3,6 @@ package org.grp5.thetask.Controllers;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.grp5.thetask.Check;
-import org.grp5.thetask.User;
-import org.grp5.thetask.PretendDatabase;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

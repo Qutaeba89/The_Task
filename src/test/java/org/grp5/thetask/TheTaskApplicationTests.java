@@ -16,18 +16,18 @@ class TheTaskApplicationTests {
     void contextLoads() {
     }
 
-//    @Test
-//    public void testCorrectPasswordLogin() {
-//        // variables
-//        String correctUsername = "testUser";
-//        String correctPassword = "12345";
-//
-//        // logIn is true by checking username and pw.
-//        boolean isLoggedIn = Check.isCorrectLogin(correctUsername, correctPassword);
-//
-//        // check if inlogg is correct
-//        assertTrue(isLoggedIn, "Inloggning med rätt användarnamn och lösenord ska lyckas");
-//    }
+    @Test
+    public void testCorrectPasswordLogin() {
+        //variables
+       String correctUsername = "admin";
+       String correctPassword = "admin";
+
+        // logIn is true by checking username and pw using method from "Check".
+       boolean isLoggedIn = Check.isLoginCredentialsCorrect(correctUsername, correctPassword);
+
+        // check if inlogg is correct
+      assertTrue(isLoggedIn, "Inloggning med rätt användarnamn och lösenord ska lyckas");
+    }
 
 
     // @Test
