@@ -15,7 +15,7 @@
         </form>
     </div>
 
- <!-- Form for creating a new Todo list -->
+    <!-- Form for creating a new Todo list -->
     <div id="add-task-list-div">
         <form th:action="@{/dashboard/createList}" method="post">
             <label for="task-list-title">Skapa ny "Att göra" lista</label><br>
@@ -34,11 +34,13 @@
                 </div>
 
                 <!-- Task div for each task in that list-->
-                <div class="task-div" th:each="task : ${todoList.tasks}">
+                <div class="task-div" th:each="task : ${todoList.tasks}"
+                     th:classappend="${task.taskCompleted ? 'completed-task-background' : '' }">
 
                     <div id="task-top-div">
                         <div id="task-top-left-div">
-                            <label th:text="${task.title}">Task title</label>
+                            <label th:text="${task.title}" th:class="${task.taskCompleted ? 'completed-task' : '' }">Task
+                                title</label>
                         </div>
                         <div id="task-top-right-div">
                             <form th:action="@{/dashboard/deleteTask}" method="post">
@@ -59,15 +61,28 @@
 
                     <div id="task-bot-div">
                         <div id="task-bot-left-div">
-                            <span th:if="${task.getTimeInMilliSecDeadLine() == -1}" class="no-deadline-span">Ingen deadline</span>
+                            <span th:if="${task.getTimeInMilliSecDeadLine() == -1}" class="no-deadline-span"
+                                  th:classappend="${task.taskCompleted ? 'hidden' : '' }">Ingen deadline</span>
                             <span th:if="${task.getTimeInMilliSecDeadLine() != -1}"
-                                  th:text="${#dates.format(task.getTimeInMilliSecDeadLine(), 'yyyy-MM-dd HH:mm')}" class="deadline-span">Deadline</span>
+                                  th:text="${#dates.format(task.getTimeInMilliSecDeadLine(), 'yyyy-MM-dd HH:mm')}"
+                                  th:classappend="${task.taskCompleted ? 'hidden' : '' }"
+                                  class="deadline-span">Deadline</span>
                         </div>
                         <div id="task-bot-mid-div">
-                            <span th:if="${task.deadlinePassed()}" class="status-overdue">&#9888; Försenad</span>
+                            <span th:if="${task.isDeadlinePassed()}" class="status-overdue">&#9888; Försenad</span>
                         </div>
                         <div id="task-bot-right-div">
-                            <input type="checkbox" class="checkbox-done">
+
+
+                            <form th:action="@{/dashboard/updateTaskStatus}" method="post">
+                                <input type="hidden" name="listId" th:value="${todoList.id}">
+                                <input type="hidden" name="taskId" th:value="${task.taskId}">
+                                <input type="checkbox" class="checkbox-done" name="status" value="true"
+                                       th:checked="${task.taskCompleted}" onchange="this.form.submit()">
+                            </form>
+
+
+                            <!--                            <input type="checkbox" class="checkbox-done">-->
                         </div>
                     </div>
 
