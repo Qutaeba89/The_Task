@@ -2,10 +2,8 @@ package org.grp5.thetask;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
+import org.grp5.thetask.ToDos.TodoList;
+import org.grp5.thetask.ToDos.TodoTask;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -18,7 +16,7 @@ class TheTaskApplicationTests {
 
     @Test
     public void testCorrectPasswordLogin() {
-        //variables
+        // variables
         String correctUsername = "admin";
         String correctPassword = "admin";
 
@@ -29,33 +27,31 @@ class TheTaskApplicationTests {
         assertTrue(isLoggedIn, "Inloggning med rätt användarnamn och lösenord ska lyckas");
     }
 
+    @Test
+    public void testAddTaskIncreasesSize() {
+        // Create a new instance of TodoList
+        TodoList todoList = new TodoList(1, "Test List");
 
-     @Test
-     public void testAddTaskIncreasesSize() {
-         // Create a new instance of TodoList
-         TodoList todoList = new TodoList(1, "Test List");
+        // Get initial size, adds a new task to the list and gets the new size
+        int initialSize = todoList.getTasks().size();
+        todoList.createTodoTask("Test Task", System.currentTimeMillis());
+        int newSize = todoList.getTasks().size();
 
-         // Get initial size, adds a new task to the list and gets the new size
-         int initialSize = todoList.getTasks().size();
-         todoList.createTodoTask("Test Task", System.currentTimeMillis());
-         int newSize = todoList.getTasks().size();
-
-    //  Controls that the initial size has been incremented by 1
+        // Controls that the initial size has been incremented by 1
         assertEquals(initialSize + 1, newSize);
-     }
-
+    }
 
     // @Test
-    // public void testAddUser() {  // Testing om user already exists
-    //     User user = new User("SS", "WW");
-    //     assertEquals("SS", user.getUsername());
-    //     assertEquals("WW", user.getPassword());
-    //     //Testing add new user
-    //     user.setUsername("rr");
-    //     user.setPassword("22");
+    // public void testAddUser() { // Testing om user already exists
+    // User user = new User("SS", "WW");
+    // assertEquals("SS", user.getUsername());
+    // assertEquals("WW", user.getPassword());
+    // //Testing add new user
+    // user.setUsername("rr");
+    // user.setPassword("22");
 
-    //     assertEquals("rr", user.getUsername());
-    //     assertEquals("22", user.getPassword());
+    // assertEquals("rr", user.getUsername());
+    // assertEquals("22", user.getPassword());
     // }
 
     @Test
