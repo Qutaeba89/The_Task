@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import static org.grp5.thetask.Constants.Attributes.*;
 
@@ -81,8 +82,9 @@ public class DashboardController {
 
 
     @PostMapping("/logout")
-    public String logout(HttpServletRequest request) {
+    public String logout(HttpServletRequest request, RedirectAttributes redirectAttributes) {
         request.getSession().invalidate();
+        redirectAttributes.addFlashAttribute("message","Välkommen åter!");
         return "redirect:/login";
     }
 
