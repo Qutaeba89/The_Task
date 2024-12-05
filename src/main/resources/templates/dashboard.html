@@ -50,13 +50,12 @@
 
                     <div id="task-bot-div">
                         <div id="task-bot-left-div">
-                            <span th:if="${task.getTimeInMilliSecDeadLine() == -1}">Ingen deadline</span>
+                            <span th:if="${task.getTimeInMilliSecDeadLine() == -1}" class="no-deadline-span">Ingen deadline</span>
                             <span th:if="${task.getTimeInMilliSecDeadLine() != -1}"
-                                  th:text="${#dates.format(task.getTimeInMilliSecDeadLine(), 'yyyy-MM-dd HH:mm')}">Deadline</span>
+                                  th:text="${#dates.format(task.getTimeInMilliSecDeadLine(), 'yyyy-MM-dd HH:mm')}" class="deadline-span">Deadline</span>
                         </div>
                         <div id="task-bot-mid-div">
                             <span th:if="${task.deadlinePassed()}" class="status-overdue">&#9888; Försenad</span>
-                            
                         </div>
                         <div id="task-bot-right-div">
                             <input type="checkbox" class="checkbox-done">
