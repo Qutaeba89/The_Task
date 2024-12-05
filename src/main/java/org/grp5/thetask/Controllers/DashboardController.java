@@ -87,17 +87,10 @@ public class DashboardController {
             @RequestParam(TASK_ID) int taskId,
             @RequestParam(LIST_ID) int listId,
             @RequestParam(value = STATUS, required = false) boolean status) {
-
-
-        System.out.println("Values: " + taskId + " : " + listId + " : " + status);
-
-
         User currentUser = Check.getUserIfActive(session);
         if (currentUser != null)
             currentUser.updateTaskStatus(status, listId, taskId);
-
         return "redirect:/dashboard";
-
     }
 
 

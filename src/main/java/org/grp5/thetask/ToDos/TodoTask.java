@@ -31,7 +31,6 @@ public class TodoTask {
 
     public void setTaskCompleted(boolean taskCompleted) {
         this.taskCompleted = taskCompleted;
-        System.out.println("task status is now:  " + this.taskCompleted);
     }
 
     public boolean isTaskCompleted() {
