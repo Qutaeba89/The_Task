@@ -15,6 +15,15 @@
         </form>
     </div>
 
+ <!-- Form for creating a new Todo list -->
+    <div id="add-task-list-div">
+        <form th:action="@{/dashboard/createList}" method="post">
+            <label for="task-list-title">Skapa ny "Att göra" lista</label><br>
+            <input type="text" id="task-list-title" name="title" placeholder="Titel på listan" required><br>
+            <button type="submit" class="add-button">Skapa ny att-göra lista</button>
+        </form>
+    </div>
+
     <div id="body-dashboard-div">
         <div class="list-div-holder">
 
@@ -90,14 +99,6 @@
         </div>
     </div>
 
-    <!-- Form for creating a new Todo list -->
-    <div id="add-task-list-div">
-        <form th:action="@{/dashboard/createList}" method="post">
-            <label for="task-list-title">Skapa ny "Att göra" lista</label><br>
-            <input type="text" id="task-list-title" name="title" placeholder="Titel på listan" required><br>
-            <button type="submit" class="add-button">Skapa ny att-göra lista</button>
-        </form>
-    </div>
 
 </div>
 
