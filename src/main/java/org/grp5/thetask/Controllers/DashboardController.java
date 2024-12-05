@@ -81,10 +81,30 @@ public class DashboardController {
     }
 
 
+    @PostMapping("/dashboard/updateTaskStatus")
+    public String updateTaskStatus(
+            HttpSession session,
+            @RequestParam(TASK_ID) int taskId,
+            @RequestParam(LIST_ID) int listId,
+            @RequestParam(value = STATUS, required = false) boolean status) {
+
+
+        System.out.println("Values: " + taskId + " : " + listId + " : " + status);
+
+
+        User currentUser = Check.getUserIfActive(session);
+        if (currentUser != null)
+            currentUser.updateTaskStatus(status, listId, taskId);
+
+        return "redirect:/dashboard";
+
+    }
+
+
     @PostMapping("/logout")
     public String logout(HttpServletRequest request, RedirectAttributes redirectAttributes) {
         request.getSession().invalidate();
-        redirectAttributes.addFlashAttribute("message","Välkommen åter!");
+        redirectAttributes.addFlashAttribute("message", "Välkommen åter!");
         return "redirect:/login";
     }
 

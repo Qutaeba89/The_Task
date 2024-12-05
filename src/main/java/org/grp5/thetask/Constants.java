@@ -12,7 +12,7 @@ public class Constants {
         public static final String LIST_TITLE = "title";
         public static final String TASK_TITLE = "taskTitle";
         public static final String DEADLINE = "deadline";
-
+        public static final String STATUS = "status";
     }
 
 }

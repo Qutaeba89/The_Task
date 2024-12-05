@@ -34,6 +34,17 @@ public class TodoList {
         return null; // if no task is found
     }
 
+    public boolean updateTaskStatus(boolean status, int taskId) {
+        TodoTask task = getTodoTask(taskId);
+        if (task != null) {
+            task.setTaskCompleted(status);
+            return true;
+        }
+
+
+        return false;
+    }
+
     // Return all todotask on todolist
     public ArrayList<TodoTask> getTasks() {
         return tasks;
