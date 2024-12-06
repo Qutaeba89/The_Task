@@ -69,10 +69,9 @@
                                   class="deadline-span">Deadline</span>
                         </div>
                         <div id="task-bot-mid-div">
-                            <span th:if="${task.isDeadlinePassed()}" class="status-overdue">&#9888; Försenad</span>
+                            <span th:if="${task.isDeadlinePassed()}" class="status-overdue" th:classappend="${task.taskCompleted ? 'hidden' : '' }">&#9888; Försenad</span>
                         </div>
                         <div id="task-bot-right-div">
-
 
                             <form th:action="@{/dashboard/updateTaskStatus}" method="post">
                                 <input type="hidden" name="listId" th:value="${todoList.id}">
@@ -80,9 +79,6 @@
                                 <input type="checkbox" class="checkbox-done" name="status" value="true"
                                        th:checked="${task.taskCompleted}" onchange="this.form.submit()">
                             </form>
-
-
-                            <!--                            <input type="checkbox" class="checkbox-done">-->
                         </div>
                     </div>
 

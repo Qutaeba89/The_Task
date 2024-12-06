@@ -3,13 +3,15 @@ The-Task Grupp 5
 Info:
 How to use this app
 If you want to try the app out you can use:
-Login username: "admin"
-Password "admin"
+
+### Login  
+- username: **"admin"**
+- Password **"admin"**
 
 _______________________
 **Kod ordning** *(vad behöver kodas först)*
 
-**Phase 1**
+### **Phase 1**
 
 - [x] Basklasser
 - [x] Controller klasser - För att kunna se sidorna.
@@ -21,7 +23,7 @@ _______________________
         - [x] Mapping Method för att visa sidan
 - [x] Html filer utan funktioner till backend
 
-**Phase 2**
+### **Phase 2**
 
 - [x] Controllers
     - [x] Login post
@@ -33,37 +35,35 @@ _______________________
         - [x] register -> login
         - [x] dashboard - login
 
-**Phase 3** 
-- [x] Synka så samma stil på alla sidor (Samma tema/intryck)
-    - [x] Bakgrund 
-    - [ ] 
-- [ ] Fixa div - inte relativ till längsta lista **Extra krydda**
-- [ ] 
-- [ ] 
+### **Phase 3**
 
-**Phase 4**
-- [ ] Testar som galningar
+- [x] Synka så samma stil på alla sidor (Samma tema/intryck)
+    - [x] Bakgrund
+- [x] Fixa div - inte relativ till längsta lista **Extra krydda**
+
+### **Phase 4**
+
+- [x] Testar som galningar
 
 _______________________
 
 **Arbetsflöde: Metod**
 
- 1. Bestäm vad du vill göra
- 2. Skapa issue OCH sätt dig som assignee
- 3. Börja jobba
- 4. När du klar med jobbet, kryssa i vald uppgift i README
- 5. Pusha (ALDRIG main branch)
- 6. Merga. Ta bort branch OCH stäng ner issue
-
+1. Bestäm vad du vill göra
+2. Skapa issue OCH sätt dig som assignee
+3. Börja jobba
+4. När du klar med jobbet, kryssa i vald uppgift i README
+5. Pusha (ALDRIG main branch)
+6. Merga. Ta bort branch OCH stäng ner issue
 
 _______________________
 
 **Våran generella TODO**
 
-**Java**
+## **Java**
 
 - **Constant Class**
-  - [x] Add a constant class with final values. This to avoid any spelling issues and DRY concept
+    - [x] Add a constant class with final values. This to avoid any spelling issues and DRY concept
 
 - **Folders**
 
@@ -78,12 +78,12 @@ _______________________
 - **User**
     - [x] Kunna skapa nya listor
     - [x] Kunna hämta alla listor
-    - [x] Kunna hämta specifc lista (kräver id?)
+    - [x] Kunna hämta specific lista (kräver id?)
     - [x] Kunna hämta password (för att checka mot inlogg)
 
 - **TodoList**
     - [x] Kunna Hämta tasks
-    - [x] Kunna Hämta specifc task (kräver id?)
+    - [x] Kunna Hämta specific task (kräver id?)
     - [x] Unikt ID
 
 - **TodoTask**
@@ -94,27 +94,28 @@ _______________________
     - [x] Kontrollera om login uppgifter stämmer - boolean
     - [x] Kontrollera om user redan finns - boolean
 
-**Javascript**
+## **Javascript**
+
 - [x] Skapa script.js fil som kan användas vid behov
 
-**Html**
+## **Html**
 
 - **Login Page**
-    
+
     - [x] POST för login uppgifter
-    - [x] Visa felmedelande vid misslyckat inlogg
-    - [x] Visa felmedelande vid saknad username/password i input fälten
+    - [x] Visa felmeddelande vid misslyckat inlogg
+    - [x] Visa felmeddelande vid saknad username/password i input fälten
     - [x] Vid lyckad inlogg, redirect till dashboard
     - [x] Skapa knapp för login
     - [x] Skapa txt fält username, password
     - [x] Skapa header som förklarar vart du kommit
     - [x] skapa länk till register
-    - [ ] style (extra krydda)
+    - [x] style (extra krydda)
 
 - **Register Page**
     - [x] POST för ny user uppgifter
-    - [x] Visa felmedelande när username redan finns (vid post)
-    - [x] Visa felmedelande när passwords inte stämmer (innan post)
+    - [x] Visa felmeddelande när username redan finns (vid post)
+    - [x] Visa felmeddelande när passwords inte stämmer (innan post)
     - [x] Vid lyckad skapande, redirect till login
     - [x] Skapa knapp för register
     - [x] Skapa txt fält, username, password, password 2
@@ -125,18 +126,18 @@ _______________________
     - [x] Visa Listor
         - [x] Visa tasks som tillhör listan
             - [x] checkbox för klar - (byta färg till grön(extra krydda))
-                - [ ] deadline blockas när task klar.(inaktiveras / triggas ej / checkas ej / lös det bara)
+                - [x] deadline blockas när task klar.(inaktiveras / triggas ej / checkas ej / lös det bara)
                 - [x] kan unchecka checkboxen (extra krydda)
-                - [ ] spara i backend att task klar. ("Task status?")
+                - [x] spara i backend att task klar. ("Task status?")
             - [ ] Färg vanligt -> basfärg
             - [x] visa title/name på task
             - [x] färgändring om deadline nådd (röd)
             - [x] visa deadline på något sätt. ( extra spicy)
     - [x] Header med username + välkommen
     - [x] Skapa divs för list, task och todoadd view
-      - [x] TodoList div
-      - [x] TodoTask div 
-      - [x] TodoAdd div
+        - [x] TodoList div
+        - [x] TodoTask div
+        - [x] TodoAdd div
     - [x] Knapp för skapa ny lista
         - [x] Knappens plats är där nästa lista ska skapas
     - [x] Knapp för ny task (Sitter i listan)
@@ -146,10 +147,10 @@ _______________________
         - [x] Knapp för skapa lista / task
     - [x] knapp för logout
         - [x] redirect till loginpage
-            - [ ] visa medelande "välkommen åter!" (extra krydda)
-    - [ ] Styla (extra krydda)
+            - [x] visa meddelande "välkommen åter!" (extra krydda)
+    - [x] Styla (extra krydda)
     - [x] vid utlogg -> redirect till login.html
-
+  
 
 - **Fragments**
     - [x] Lägg till dependencies
@@ -158,12 +159,12 @@ _______________________
     - [x] Skapa en annan test sida med baslayout som layout
 
 - **Controllers**
-    - [x] Grundlläggande Mapping i LoginController
+    - [x] Grundläggande Mapping i LoginController
 
 - **Login**
     - [x] Hantera korrekt inlogg - Redirect dashboard
-    - [x] Hantera felaktigt inlogg - visa felmedelande för user
-    - [x] Hanera om session redan finns - Redirect dashboard.
+    - [x] Hantera felaktigt inlogg - visa felmeddelande för user
+    - [x] Hantera om session redan finns - Redirect dashboard.
 
 - **Register**
     - [x] Hantera ny user
@@ -171,7 +172,7 @@ _______________________
         - [x] Redirect till login
             - [x] Visa meddelande att du har skapat ny user
     - [x] Hantera user som redan finns
-        - [x] skicka felmedelande till user
+        - [x] skicka felmeddelande till user
 
 - **Dashboard**
     - [x] Hantera skapande av ny lista
@@ -179,5 +180,5 @@ _______________________
         - [x] visa nya listan
     - [x] Hantera skapande av ny task
         - [x] spara i korrekt lista
-    - [x] Redirect till login om ingen session finns. 
-      - (ska inte kunna gå att nå dashboard utloggad)
+    - [x] Redirect till login om ingen session finns.
+        - (ska inte kunna gå att nå dashboard utloggad)
