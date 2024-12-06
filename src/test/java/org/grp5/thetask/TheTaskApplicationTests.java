@@ -41,18 +41,14 @@ class TheTaskApplicationTests {
         assertEquals(initialSize + 1, newSize);
     }
 
-    // @Test
-    // public void testAddUser() { // Testing om user already exists
-    // User user = new User("SS", "WW");
-    // assertEquals("SS", user.getUsername());
-    // assertEquals("WW", user.getPassword());
-    // //Testing add new user
-    // user.setUsername("rr");
-    // user.setPassword("22");
-
-    // assertEquals("rr", user.getUsername());
-    // assertEquals("22", user.getPassword());
-    // }
+    @Test
+    public void testAddUser() { 
+        // Testing om user already exists
+    User user = new User("SS", "WW");
+    assertEquals("SS", user.getUsername());
+    assertEquals("WW", user.getPassword());
+ 
+    }
 
     @Test
     public void testIsDeadLineOver() {
